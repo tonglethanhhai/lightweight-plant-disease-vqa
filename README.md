@@ -14,7 +14,7 @@ This repository provides the standalone implementation and inference checkpoint 
 
 ```
 lightweight-plant-disease-vqa/
-├── proposed_mnet_lstm_para.ipynb                                   # Standalone notebook (model, inference, eval, CSV summary)
+├── proposed_mnet_lstm_para.ipynb                                   # Minimal notebook (model architecture and inference)
 ├── examples/
 │   └── sample_rice_brown_spot.jpg                                  # Sample leaf image used in notebook inference cell
 ├── checkpoints/
@@ -44,7 +44,4 @@ The RiMa rice and maize leaf disease images are publicly available at https://do
 pip install -r requirements.txt
 ```
 
-Open and run `proposed_mnet_lstm_para.ipynb` from the repository root. Optional environment variables for local evaluation on downloaded RiMa files:
-
-- `RIMA_SAMPLE_IMAGE`: path to a leaf image for single-image prediction
-- `RIMA_DATA_DIR` and `RIMA_IMAGE_ROOT`: paths to local RiMa JSON annotations (`test.json`) and images
+Open and run `proposed_mnet_lstm_para.ipynb` from the repository root to inspect the architecture and run inference on `examples/sample_rice_brown_spot.jpg` (or replace `IMAGE_PATH` with any leaf image).
