@@ -1,0 +1,593 @@
+2026-11-15 16:45:07,059 - train_vlm_lora - INFO - Run dir: logs/lvlm_reference/qwen3vl_4b_lora_3ep_paraphrases\seed42 | seed=42 | git=None
+2026-11-15 16:45:07,059 - train_vlm_lora - INFO - Train config: {"epochs": 3, "batch_size": 4, "grad_accum": 4, "lr": 0.0002, "weight_decay": 0.0, "warmup_ratio": 0.03, "max_grad_norm": 1.0, "gradient_checkpointing": true, "num_workers": 4, "max_train_samples": null, "eval_samples": 600, "eval_every_steps": 0, "log_every_steps": 20, "use_paraphrase": true}
+2026-11-15 16:45:07,340 - train_vlm_lora - INFO - Train samples: 39322 | Val samples: 5581
+2026-11-15 16:45:20,766 - train_vlm_lora - INFO - Parameters: {'total_params_M': 4449.612, 'trainable_params_M': 11.796}
+2026-11-15 16:45:20,773 - train_vlm_lora - INFO - Optimisation steps: 7374 (warmup 221), grad_accum=4
+2026-11-15 16:48:06,413 - train_vlm_lora - INFO - step 20/7374 loss=0.7581 lr=1.81e-05 vram=10.4GB
+2026-11-15 16:49:22,669 - train_vlm_lora - INFO - step 40/7374 loss=0.5326 lr=3.62e-05 vram=10.4GB
+2026-11-15 16:50:38,994 - train_vlm_lora - INFO - step 60/7374 loss=0.4071 lr=5.43e-05 vram=10.4GB
+2026-11-15 16:51:54,334 - train_vlm_lora - INFO - step 80/7374 loss=0.3438 lr=7.24e-05 vram=10.4GB
+2026-11-15 16:53:10,396 - train_vlm_lora - INFO - step 100/7374 loss=0.3011 lr=9.05e-05 vram=10.4GB
+2026-11-15 16:54:26,481 - train_vlm_lora - INFO - step 120/7374 loss=0.2728 lr=1.09e-04 vram=10.4GB
+2026-11-15 16:55:42,179 - train_vlm_lora - INFO - step 140/7374 loss=0.2491 lr=1.27e-04 vram=10.4GB
+2026-11-15 16:56:58,234 - train_vlm_lora - INFO - step 160/7374 loss=0.2338 lr=1.45e-04 vram=10.4GB
+2026-11-15 16:58:14,894 - train_vlm_lora - INFO - step 180/7374 loss=0.2210 lr=1.63e-04 vram=10.4GB
+2026-11-15 16:59:30,810 - train_vlm_lora - INFO - step 200/7374 loss=0.2112 lr=1.81e-04 vram=10.4GB
+2026-11-15 17:00:45,881 - train_vlm_lora - INFO - step 220/7374 loss=0.2018 lr=1.99e-04 vram=10.4GB
+2026-11-15 17:02:01,469 - train_vlm_lora - INFO - step 240/7374 loss=0.1933 lr=2.00e-04 vram=10.4GB
+2026-11-15 17:03:17,948 - train_vlm_lora - INFO - step 260/7374 loss=0.1862 lr=2.00e-04 vram=10.4GB
+2026-11-15 17:04:34,821 - train_vlm_lora - INFO - step 280/7374 loss=0.1792 lr=2.00e-04 vram=10.4GB
+2026-11-15 17:05:50,199 - train_vlm_lora - INFO - step 300/7374 loss=0.1725 lr=2.00e-04 vram=10.4GB
+2026-11-15 17:07:05,984 - train_vlm_lora - INFO - step 320/7374 loss=0.1676 lr=2.00e-04 vram=10.4GB
+2026-11-15 17:08:21,591 - train_vlm_lora - INFO - step 340/7374 loss=0.1628 lr=2.00e-04 vram=10.4GB
+2026-11-15 17:09:37,753 - train_vlm_lora - INFO - step 360/7374 loss=0.1584 lr=2.00e-04 vram=10.4GB
+2026-11-15 17:10:53,590 - train_vlm_lora - INFO - step 380/7374 loss=0.1541 lr=2.00e-04 vram=10.4GB
+2026-11-15 17:12:10,316 - train_vlm_lora - INFO - step 400/7374 loss=0.1501 lr=2.00e-04 vram=10.4GB
+2026-11-15 17:13:26,732 - train_vlm_lora - INFO - step 420/7374 loss=0.1464 lr=2.00e-04 vram=10.4GB
+2026-11-15 17:14:43,366 - train_vlm_lora - INFO - step 440/7374 loss=0.1434 lr=2.00e-04 vram=10.4GB
+2026-11-15 17:15:58,904 - train_vlm_lora - INFO - step 460/7374 loss=0.1401 lr=1.99e-04 vram=10.4GB
+2026-11-15 17:17:14,881 - train_vlm_lora - INFO - step 480/7374 loss=0.1373 lr=1.99e-04 vram=10.4GB
+2026-11-15 17:18:30,576 - train_vlm_lora - INFO - step 500/7374 loss=0.1345 lr=1.99e-04 vram=10.4GB
+2026-11-15 17:19:47,065 - train_vlm_lora - INFO - step 520/7374 loss=0.1319 lr=1.99e-04 vram=10.4GB
+2026-11-15 17:21:03,764 - train_vlm_lora - INFO - step 540/7374 loss=0.1298 lr=1.99e-04 vram=10.4GB
+2026-11-15 17:22:20,159 - train_vlm_lora - INFO - step 560/7374 loss=0.1276 lr=1.99e-04 vram=10.4GB
+2026-11-15 17:23:36,867 - train_vlm_lora - INFO - step 580/7374 loss=0.1251 lr=1.99e-04 vram=10.4GB
+2026-11-15 17:24:53,268 - train_vlm_lora - INFO - step 600/7374 loss=0.1225 lr=1.99e-04 vram=10.4GB
+2026-11-15 17:26:08,679 - train_vlm_lora - INFO - step 620/7374 loss=0.1207 lr=1.98e-04 vram=10.4GB
+2026-11-15 17:27:24,253 - train_vlm_lora - INFO - step 640/7374 loss=0.1188 lr=1.98e-04 vram=10.4GB
+2026-11-15 17:28:39,760 - train_vlm_lora - INFO - step 660/7374 loss=0.1168 lr=1.98e-04 vram=10.4GB
+2026-11-15 17:29:55,130 - train_vlm_lora - INFO - step 680/7374 loss=0.1151 lr=1.98e-04 vram=10.4GB
+2026-11-15 17:31:09,963 - train_vlm_lora - INFO - step 700/7374 loss=0.1133 lr=1.98e-04 vram=10.4GB
+2026-11-15 17:32:25,855 - train_vlm_lora - INFO - step 720/7374 loss=0.1119 lr=1.98e-04 vram=10.4GB
+2026-11-15 17:33:42,642 - train_vlm_lora - INFO - step 740/7374 loss=0.1105 lr=1.97e-04 vram=10.4GB
+2026-11-15 17:34:59,266 - train_vlm_lora - INFO - step 760/7374 loss=0.1089 lr=1.97e-04 vram=10.4GB
+2026-11-15 17:36:15,439 - train_vlm_lora - INFO - step 780/7374 loss=0.1077 lr=1.97e-04 vram=10.4GB
+2026-11-15 17:37:30,831 - train_vlm_lora - INFO - step 800/7374 loss=0.1063 lr=1.97e-04 vram=10.4GB
+2026-11-15 17:38:46,567 - train_vlm_lora - INFO - step 820/7374 loss=0.1052 lr=1.97e-04 vram=10.4GB
+2026-11-15 17:40:02,507 - train_vlm_lora - INFO - step 840/7374 loss=0.1038 lr=1.96e-04 vram=10.4GB
+2026-11-15 17:41:18,225 - train_vlm_lora - INFO - step 860/7374 loss=0.1025 lr=1.96e-04 vram=10.4GB
+2026-11-15 17:42:34,782 - train_vlm_lora - INFO - step 880/7374 loss=0.1014 lr=1.96e-04 vram=10.4GB
+2026-11-15 17:43:52,670 - train_vlm_lora - INFO - step 900/7374 loss=0.1001 lr=1.96e-04 vram=10.4GB
+2026-11-15 17:45:08,977 - train_vlm_lora - INFO - step 920/7374 loss=0.0991 lr=1.95e-04 vram=10.4GB
+2026-11-15 17:46:25,377 - train_vlm_lora - INFO - step 940/7374 loss=0.0980 lr=1.95e-04 vram=10.4GB
+2026-11-15 17:47:42,283 - train_vlm_lora - INFO - step 960/7374 loss=0.0969 lr=1.95e-04 vram=10.4GB
+2026-11-15 17:48:58,640 - train_vlm_lora - INFO - step 980/7374 loss=0.0958 lr=1.94e-04 vram=10.4GB
+2026-11-15 17:50:15,472 - train_vlm_lora - INFO - step 1000/7374 loss=0.0947 lr=1.94e-04 vram=10.4GB
+2026-11-15 17:51:31,835 - train_vlm_lora - INFO - step 1020/7374 loss=0.0938 lr=1.94e-04 vram=10.4GB
+2026-11-15 17:52:47,538 - train_vlm_lora - INFO - step 1040/7374 loss=0.0927 lr=1.94e-04 vram=10.4GB
+2026-11-15 17:54:03,660 - train_vlm_lora - INFO - step 1060/7374 loss=0.0918 lr=1.93e-04 vram=10.4GB
+2026-11-15 17:55:19,739 - train_vlm_lora - INFO - step 1080/7374 loss=0.0910 lr=1.93e-04 vram=10.4GB
+2026-11-15 17:56:36,408 - train_vlm_lora - INFO - step 1100/7374 loss=0.0903 lr=1.93e-04 vram=10.4GB
+2026-11-15 17:57:53,044 - train_vlm_lora - INFO - step 1120/7374 loss=0.0894 lr=1.92e-04 vram=10.4GB
+2026-11-15 17:59:09,236 - train_vlm_lora - INFO - step 1140/7374 loss=0.0886 lr=1.92e-04 vram=10.4GB
+2026-11-15 18:00:24,793 - train_vlm_lora - INFO - step 1160/7374 loss=0.0879 lr=1.92e-04 vram=10.4GB
+2026-11-15 18:01:40,316 - train_vlm_lora - INFO - step 1180/7374 loss=0.0870 lr=1.91e-04 vram=10.4GB
+2026-11-15 18:02:56,147 - train_vlm_lora - INFO - step 1200/7374 loss=0.0864 lr=1.91e-04 vram=10.4GB
+2026-11-15 18:04:11,610 - train_vlm_lora - INFO - step 1220/7374 loss=0.0856 lr=1.91e-04 vram=10.4GB
+2026-11-15 18:05:26,870 - train_vlm_lora - INFO - step 1240/7374 loss=0.0850 lr=1.90e-04 vram=10.4GB
+2026-11-15 18:06:43,228 - train_vlm_lora - INFO - step 1260/7374 loss=0.0845 lr=1.90e-04 vram=10.4GB
+2026-11-15 18:07:58,979 - train_vlm_lora - INFO - step 1280/7374 loss=0.0839 lr=1.89e-04 vram=10.4GB
+2026-11-15 18:09:15,787 - train_vlm_lora - INFO - step 1300/7374 loss=0.0832 lr=1.89e-04 vram=10.4GB
+2026-11-15 18:10:31,295 - train_vlm_lora - INFO - step 1320/7374 loss=0.0825 lr=1.89e-04 vram=10.4GB
+2026-11-15 18:11:46,711 - train_vlm_lora - INFO - step 1340/7374 loss=0.0820 lr=1.88e-04 vram=10.4GB
+2026-11-15 18:13:02,909 - train_vlm_lora - INFO - step 1360/7374 loss=0.0816 lr=1.88e-04 vram=10.4GB
+2026-11-15 18:14:19,946 - train_vlm_lora - INFO - step 1380/7374 loss=0.0811 lr=1.87e-04 vram=10.4GB
+2026-11-15 18:15:35,345 - train_vlm_lora - INFO - step 1400/7374 loss=0.0805 lr=1.87e-04 vram=10.4GB
+2026-11-15 18:16:51,459 - train_vlm_lora - INFO - step 1420/7374 loss=0.0799 lr=1.86e-04 vram=10.4GB
+2026-11-15 18:18:07,241 - train_vlm_lora - INFO - step 1440/7374 loss=0.0794 lr=1.86e-04 vram=10.4GB
+2026-11-15 18:19:22,876 - train_vlm_lora - INFO - step 1460/7374 loss=0.0788 lr=1.86e-04 vram=10.4GB
+2026-11-15 18:20:38,699 - train_vlm_lora - INFO - step 1480/7374 loss=0.0782 lr=1.85e-04 vram=10.4GB
+2026-11-15 18:21:54,551 - train_vlm_lora - INFO - step 1500/7374 loss=0.0778 lr=1.85e-04 vram=10.4GB
+2026-11-15 18:23:10,293 - train_vlm_lora - INFO - step 1520/7374 loss=0.0773 lr=1.84e-04 vram=10.4GB
+2026-11-15 18:24:25,651 - train_vlm_lora - INFO - step 1540/7374 loss=0.0770 lr=1.84e-04 vram=10.4GB
+2026-11-15 18:25:41,434 - train_vlm_lora - INFO - step 1560/7374 loss=0.0764 lr=1.83e-04 vram=10.4GB
+2026-11-15 18:26:58,280 - train_vlm_lora - INFO - step 1580/7374 loss=0.0760 lr=1.83e-04 vram=10.4GB
+2026-11-15 18:28:14,380 - train_vlm_lora - INFO - step 1600/7374 loss=0.0757 lr=1.82e-04 vram=10.4GB
+2026-11-15 18:29:29,806 - train_vlm_lora - INFO - step 1620/7374 loss=0.0752 lr=1.82e-04 vram=10.4GB
+2026-11-15 18:30:46,092 - train_vlm_lora - INFO - step 1640/7374 loss=0.0749 lr=1.81e-04 vram=10.4GB
+2026-11-15 18:32:02,525 - train_vlm_lora - INFO - step 1660/7374 loss=0.0744 lr=1.81e-04 vram=10.4GB
+2026-11-15 18:33:18,173 - train_vlm_lora - INFO - step 1680/7374 loss=0.0741 lr=1.80e-04 vram=10.4GB
+2026-11-15 18:34:34,479 - train_vlm_lora - INFO - step 1700/7374 loss=0.0737 lr=1.80e-04 vram=10.4GB
+2026-11-15 18:35:51,289 - train_vlm_lora - INFO - step 1720/7374 loss=0.0733 lr=1.79e-04 vram=10.4GB
+2026-11-15 18:37:08,026 - train_vlm_lora - INFO - step 1740/7374 loss=0.0729 lr=1.79e-04 vram=10.4GB
+2026-11-15 18:38:24,547 - train_vlm_lora - INFO - step 1760/7374 loss=0.0725 lr=1.78e-04 vram=10.4GB
+2026-11-15 18:39:40,462 - train_vlm_lora - INFO - step 1780/7374 loss=0.0721 lr=1.77e-04 vram=10.4GB
+2026-11-15 18:40:56,077 - train_vlm_lora - INFO - step 1800/7374 loss=0.0717 lr=1.77e-04 vram=10.4GB
+2026-11-15 18:42:12,128 - train_vlm_lora - INFO - step 1820/7374 loss=0.0714 lr=1.76e-04 vram=10.4GB
+2026-11-15 18:43:27,828 - train_vlm_lora - INFO - step 1840/7374 loss=0.0710 lr=1.76e-04 vram=10.4GB
+2026-11-15 18:44:44,270 - train_vlm_lora - INFO - step 1860/7374 loss=0.0707 lr=1.75e-04 vram=10.4GB
+2026-11-15 18:46:01,105 - train_vlm_lora - INFO - step 1880/7374 loss=0.0704 lr=1.75e-04 vram=10.4GB
+2026-11-15 18:47:18,018 - train_vlm_lora - INFO - step 1900/7374 loss=0.0702 lr=1.74e-04 vram=10.4GB
+2026-11-15 18:48:34,005 - train_vlm_lora - INFO - step 1920/7374 loss=0.0698 lr=1.73e-04 vram=10.4GB
+2026-11-15 18:49:49,687 - train_vlm_lora - INFO - step 1940/7374 loss=0.0694 lr=1.73e-04 vram=10.4GB
+2026-11-15 18:51:05,082 - train_vlm_lora - INFO - step 1960/7374 loss=0.0691 lr=1.72e-04 vram=10.4GB
+2026-11-15 18:52:20,638 - train_vlm_lora - INFO - step 1980/7374 loss=0.0688 lr=1.72e-04 vram=10.4GB
+2026-11-15 18:53:36,055 - train_vlm_lora - INFO - step 2000/7374 loss=0.0684 lr=1.71e-04 vram=10.4GB
+2026-11-15 18:54:52,491 - train_vlm_lora - INFO - step 2020/7374 loss=0.0681 lr=1.70e-04 vram=10.4GB
+2026-11-15 18:56:09,151 - train_vlm_lora - INFO - step 2040/7374 loss=0.0678 lr=1.70e-04 vram=10.4GB
+2026-11-15 18:57:25,912 - train_vlm_lora - INFO - step 2060/7374 loss=0.0675 lr=1.69e-04 vram=10.4GB
+2026-11-15 18:58:42,444 - train_vlm_lora - INFO - step 2080/7374 loss=0.0673 lr=1.68e-04 vram=10.4GB
+2026-11-15 18:59:59,096 - train_vlm_lora - INFO - step 2100/7374 loss=0.0669 lr=1.68e-04 vram=10.4GB
+2026-11-15 19:01:15,576 - train_vlm_lora - INFO - step 2120/7374 loss=0.0667 lr=1.67e-04 vram=10.4GB
+2026-11-15 19:02:32,618 - train_vlm_lora - INFO - step 2140/7374 loss=0.0664 lr=1.67e-04 vram=10.4GB
+2026-11-15 19:03:49,075 - train_vlm_lora - INFO - step 2160/7374 loss=0.0662 lr=1.66e-04 vram=10.4GB
+2026-11-15 19:05:06,231 - train_vlm_lora - INFO - step 2180/7374 loss=0.0660 lr=1.65e-04 vram=10.4GB
+2026-11-15 19:06:22,371 - train_vlm_lora - INFO - step 2200/7374 loss=0.0657 lr=1.65e-04 vram=10.4GB
+2026-11-15 19:07:37,582 - train_vlm_lora - INFO - step 2220/7374 loss=0.0655 lr=1.64e-04 vram=10.4GB
+2026-11-15 19:08:52,894 - train_vlm_lora - INFO - step 2240/7374 loss=0.0654 lr=1.63e-04 vram=10.4GB
+2026-11-15 19:10:08,842 - train_vlm_lora - INFO - step 2260/7374 loss=0.0651 lr=1.63e-04 vram=10.4GB
+2026-11-15 19:11:24,414 - train_vlm_lora - INFO - step 2280/7374 loss=0.0648 lr=1.62e-04 vram=10.4GB
+2026-11-15 19:12:40,410 - train_vlm_lora - INFO - step 2300/7374 loss=0.0645 lr=1.61e-04 vram=10.4GB
+2026-11-15 19:13:57,140 - train_vlm_lora - INFO - step 2320/7374 loss=0.0643 lr=1.60e-04 vram=10.4GB
+2026-11-15 19:15:13,599 - train_vlm_lora - INFO - step 2340/7374 loss=0.0641 lr=1.60e-04 vram=10.4GB
+2026-11-15 19:16:30,048 - train_vlm_lora - INFO - step 2360/7374 loss=0.0638 lr=1.59e-04 vram=10.4GB
+2026-11-15 19:17:47,259 - train_vlm_lora - INFO - step 2380/7374 loss=0.0636 lr=1.58e-04 vram=10.4GB
+2026-11-15 19:19:09,069 - train_vlm_lora - INFO - step 2400/7374 loss=0.0633 lr=1.58e-04 vram=10.4GB
+2026-11-15 19:20:25,733 - train_vlm_lora - INFO - step 2420/7374 loss=0.0630 lr=1.57e-04 vram=10.4GB
+2026-11-15 19:21:42,371 - train_vlm_lora - INFO - step 2440/7374 loss=0.0628 lr=1.56e-04 vram=10.4GB
+2026-11-15 19:27:11,468 - train_vlm_lora - INFO -     epoch                 : 1
+2026-11-15 19:27:11,468 - train_vlm_lora - INFO -     step                  : 2458
+2026-11-15 19:27:11,468 - train_vlm_lora - INFO -     lr                    : 0.0002
+2026-11-15 19:27:11,468 - train_vlm_lora - INFO -     train_loss            : 0.0626
+2026-11-15 19:27:11,468 - train_vlm_lora - INFO -     train_acc             : nan
+2026-11-15 19:27:11,468 - train_vlm_lora - INFO -     val_loss              : nan
+2026-11-15 19:27:11,468 - train_vlm_lora - INFO -     val_accuracy_top1     : 87.1667
+2026-11-15 19:27:11,468 - train_vlm_lora - INFO -     val_macro_f1          : 78.6479
+2026-11-15 19:27:11,468 - train_vlm_lora - INFO -     val_perception_acc    : 83.1776
+2026-11-15 19:27:11,468 - train_vlm_lora - INFO -     val_perception_macro_f1: 75.8371
+2026-11-15 19:27:11,468 - train_vlm_lora - INFO -     val_presence_acc      : 97.0930
+2026-11-15 19:27:11,468 - train_vlm_lora - INFO -     val_presence_f1       : 96.9179
+2026-11-15 19:27:11,469 - train_vlm_lora - INFO -     val_consistency       : 95.0000
+2026-11-15 19:27:11,469 - train_vlm_lora - INFO -     epoch_time_sec        : 9447.9000
+2026-11-15 19:27:11,469 - train_vlm_lora - INFO -     is_best               : True
+2026-11-15 19:27:11,469 - train_vlm_lora - INFO -     peak_vram_mb          : 10654.4000
+2026-11-15 19:27:11,469 - train_vlm_lora - INFO -     n_val_samples         : 600
+2026-11-15 19:27:12,168 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-15 19:27:12,170 - huggingface_hub.utils._http - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-11-15 19:27:12,176 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-VL-4B-Instruct/ebb281ec70b05090aa6165b016eac8ec08e71b17/config.json "HTTP/1.1 200 OK"
+2026-11-15 19:27:12,382 - train_vlm_lora - INFO - Saved best_lora_adapter (val macro_f1=78.65)
+2026-11-15 19:27:12,692 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-15 19:27:12,699 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-VL-4B-Instruct/ebb281ec70b05090aa6165b016eac8ec08e71b17/config.json "HTTP/1.1 200 OK"
+2026-11-15 19:27:20,407 - train_vlm_lora - INFO - step 2460/7374 loss=0.0550 lr=1.55e-04 vram=10.4GB
+2026-11-15 19:28:37,115 - train_vlm_lora - INFO - step 2480/7374 loss=0.0345 lr=1.55e-04 vram=10.4GB
+2026-11-15 19:29:53,348 - train_vlm_lora - INFO - step 2500/7374 loss=0.0264 lr=1.54e-04 vram=10.4GB
+2026-11-15 19:31:08,978 - train_vlm_lora - INFO - step 2520/7374 loss=0.0269 lr=1.53e-04 vram=10.4GB
+2026-11-15 19:32:25,071 - train_vlm_lora - INFO - step 2540/7374 loss=0.0268 lr=1.52e-04 vram=10.4GB
+2026-11-15 19:33:41,032 - train_vlm_lora - INFO - step 2560/7374 loss=0.0277 lr=1.52e-04 vram=10.4GB
+2026-11-15 19:34:56,328 - train_vlm_lora - INFO - step 2580/7374 loss=0.0302 lr=1.51e-04 vram=10.4GB
+2026-11-15 19:36:11,799 - train_vlm_lora - INFO - step 2600/7374 loss=0.0295 lr=1.50e-04 vram=10.4GB
+2026-11-15 19:37:27,557 - train_vlm_lora - INFO - step 2620/7374 loss=0.0292 lr=1.49e-04 vram=10.4GB
+2026-11-15 19:38:43,345 - train_vlm_lora - INFO - step 2640/7374 loss=0.0286 lr=1.49e-04 vram=10.4GB
+2026-11-15 19:40:47,859 - train_vlm_lora - INFO - step 2660/7374 loss=0.0284 lr=1.48e-04 vram=10.4GB
+2026-11-15 19:42:34,842 - train_vlm_lora - INFO - step 2680/7374 loss=0.0279 lr=1.47e-04 vram=10.4GB
+2026-11-15 19:43:51,541 - train_vlm_lora - INFO - step 2700/7374 loss=0.0274 lr=1.46e-04 vram=10.4GB
+2026-11-15 19:45:07,854 - train_vlm_lora - INFO - step 2720/7374 loss=0.0269 lr=1.46e-04 vram=10.4GB
+2026-11-15 19:46:23,837 - train_vlm_lora - INFO - step 2740/7374 loss=0.0276 lr=1.45e-04 vram=10.4GB
+2026-11-15 19:47:39,605 - train_vlm_lora - INFO - step 2760/7374 loss=0.0276 lr=1.44e-04 vram=10.4GB
+2026-11-15 19:48:55,334 - train_vlm_lora - INFO - step 2780/7374 loss=0.0279 lr=1.43e-04 vram=10.4GB
+2026-11-15 19:50:11,177 - train_vlm_lora - INFO - step 2800/7374 loss=0.0280 lr=1.42e-04 vram=10.4GB
+2026-11-15 19:51:27,646 - train_vlm_lora - INFO - step 2820/7374 loss=0.0276 lr=1.42e-04 vram=10.4GB
+2026-11-15 19:52:44,483 - train_vlm_lora - INFO - step 2840/7374 loss=0.0277 lr=1.41e-04 vram=10.4GB
+2026-11-15 19:53:39,722 - train_vlm_lora - INFO - step 2860/7374 loss=0.0279 lr=1.40e-04 vram=10.4GB
+2026-11-15 19:54:17,388 - train_vlm_lora - INFO - step 2880/7374 loss=0.0276 lr=1.39e-04 vram=10.4GB
+2026-11-15 19:54:55,185 - train_vlm_lora - INFO - step 2900/7374 loss=0.0277 lr=1.38e-04 vram=10.4GB
+2026-11-15 19:56:02,835 - train_vlm_lora - INFO - step 2920/7374 loss=0.0278 lr=1.38e-04 vram=10.4GB
+2026-11-15 19:57:13,670 - train_vlm_lora - INFO - step 2940/7374 loss=0.0278 lr=1.37e-04 vram=10.4GB
+2026-11-15 19:58:25,025 - train_vlm_lora - INFO - step 2960/7374 loss=0.0277 lr=1.36e-04 vram=10.4GB
+2026-11-15 19:59:37,295 - train_vlm_lora - INFO - step 2980/7374 loss=0.0278 lr=1.35e-04 vram=10.4GB
+2026-11-15 20:00:51,988 - train_vlm_lora - INFO - step 3000/7374 loss=0.0284 lr=1.34e-04 vram=10.4GB
+2026-11-15 20:02:06,754 - train_vlm_lora - INFO - step 3020/7374 loss=0.0282 lr=1.33e-04 vram=10.4GB
+2026-11-15 20:03:22,496 - train_vlm_lora - INFO - step 3040/7374 loss=0.0283 lr=1.33e-04 vram=10.4GB
+2026-11-15 20:04:35,692 - train_vlm_lora - INFO - step 3060/7374 loss=0.0282 lr=1.32e-04 vram=10.4GB
+2026-11-15 20:05:50,353 - train_vlm_lora - INFO - step 3080/7374 loss=0.0282 lr=1.31e-04 vram=10.4GB
+2026-11-15 20:07:03,089 - train_vlm_lora - INFO - step 3100/7374 loss=0.0283 lr=1.30e-04 vram=10.4GB
+2026-11-15 20:08:17,543 - train_vlm_lora - INFO - step 3120/7374 loss=0.0280 lr=1.29e-04 vram=10.4GB
+2026-11-15 20:09:30,556 - train_vlm_lora - INFO - step 3140/7374 loss=0.0281 lr=1.28e-04 vram=10.4GB
+2026-11-15 20:10:40,728 - train_vlm_lora - INFO - step 3160/7374 loss=0.0280 lr=1.28e-04 vram=10.4GB
+2026-11-15 20:11:51,975 - train_vlm_lora - INFO - step 3180/7374 loss=0.0279 lr=1.27e-04 vram=10.4GB
+2026-11-15 20:13:06,727 - train_vlm_lora - INFO - step 3200/7374 loss=0.0278 lr=1.26e-04 vram=10.4GB
+2026-11-15 20:14:18,280 - train_vlm_lora - INFO - step 3220/7374 loss=0.0279 lr=1.25e-04 vram=10.4GB
+2026-11-15 20:15:33,239 - train_vlm_lora - INFO - step 3240/7374 loss=0.0280 lr=1.24e-04 vram=10.4GB
+2026-11-15 20:16:44,509 - train_vlm_lora - INFO - step 3260/7374 loss=0.0280 lr=1.23e-04 vram=10.4GB
+2026-11-15 20:17:55,502 - train_vlm_lora - INFO - step 3280/7374 loss=0.0279 lr=1.23e-04 vram=10.4GB
+2026-11-15 20:19:11,166 - train_vlm_lora - INFO - step 3300/7374 loss=0.0278 lr=1.22e-04 vram=10.4GB
+2026-11-15 20:20:22,447 - train_vlm_lora - INFO - step 3320/7374 loss=0.0277 lr=1.21e-04 vram=10.4GB
+2026-11-15 20:21:38,732 - train_vlm_lora - INFO - step 3340/7374 loss=0.0277 lr=1.20e-04 vram=10.4GB
+2026-11-15 20:22:54,389 - train_vlm_lora - INFO - step 3360/7374 loss=0.0277 lr=1.19e-04 vram=10.4GB
+2026-11-15 20:24:09,216 - train_vlm_lora - INFO - step 3380/7374 loss=0.0278 lr=1.18e-04 vram=10.4GB
+2026-11-15 20:25:23,574 - train_vlm_lora - INFO - step 3400/7374 loss=0.0277 lr=1.17e-04 vram=10.4GB
+2026-11-15 20:26:37,252 - train_vlm_lora - INFO - step 3420/7374 loss=0.0277 lr=1.17e-04 vram=10.4GB
+2026-11-15 20:27:48,244 - train_vlm_lora - INFO - step 3440/7374 loss=0.0278 lr=1.16e-04 vram=10.4GB
+2026-11-15 20:28:59,022 - train_vlm_lora - INFO - step 3460/7374 loss=0.0278 lr=1.15e-04 vram=10.4GB
+2026-11-15 20:30:10,646 - train_vlm_lora - INFO - step 3480/7374 loss=0.0276 lr=1.14e-04 vram=10.4GB
+2026-11-15 20:31:21,238 - train_vlm_lora - INFO - step 3500/7374 loss=0.0276 lr=1.13e-04 vram=10.4GB
+2026-11-15 20:32:32,893 - train_vlm_lora - INFO - step 3520/7374 loss=0.0275 lr=1.12e-04 vram=10.4GB
+2026-11-15 20:33:43,797 - train_vlm_lora - INFO - step 3540/7374 loss=0.0275 lr=1.11e-04 vram=10.4GB
+2026-11-15 20:34:54,897 - train_vlm_lora - INFO - step 3560/7374 loss=0.0274 lr=1.10e-04 vram=10.4GB
+2026-11-15 20:36:05,538 - train_vlm_lora - INFO - step 3580/7374 loss=0.0274 lr=1.10e-04 vram=10.4GB
+2026-11-15 20:37:20,198 - train_vlm_lora - INFO - step 3600/7374 loss=0.0272 lr=1.09e-04 vram=10.4GB
+2026-11-15 20:38:36,920 - train_vlm_lora - INFO - step 3620/7374 loss=0.0272 lr=1.08e-04 vram=10.4GB
+2026-11-15 20:39:53,621 - train_vlm_lora - INFO - step 3640/7374 loss=0.0271 lr=1.07e-04 vram=10.4GB
+2026-11-15 20:41:09,570 - train_vlm_lora - INFO - step 3660/7374 loss=0.0271 lr=1.06e-04 vram=10.4GB
+2026-11-15 20:42:24,001 - train_vlm_lora - INFO - step 3680/7374 loss=0.0269 lr=1.05e-04 vram=10.4GB
+2026-11-15 20:43:36,841 - train_vlm_lora - INFO - step 3700/7374 loss=0.0270 lr=1.04e-04 vram=10.4GB
+2026-11-15 20:44:50,518 - train_vlm_lora - INFO - step 3720/7374 loss=0.0269 lr=1.03e-04 vram=10.4GB
+2026-11-15 20:46:07,106 - train_vlm_lora - INFO - step 3740/7374 loss=0.0268 lr=1.03e-04 vram=10.4GB
+2026-11-15 20:47:19,554 - train_vlm_lora - INFO - step 3760/7374 loss=0.0267 lr=1.02e-04 vram=10.4GB
+2026-11-15 20:48:35,986 - train_vlm_lora - INFO - step 3780/7374 loss=0.0267 lr=1.01e-04 vram=10.4GB
+2026-11-15 20:49:52,098 - train_vlm_lora - INFO - step 3800/7374 loss=0.0267 lr=9.99e-05 vram=10.4GB
+2026-11-15 20:51:08,329 - train_vlm_lora - INFO - step 3820/7374 loss=0.0266 lr=9.90e-05 vram=10.4GB
+2026-11-15 20:52:27,346 - train_vlm_lora - INFO - step 3840/7374 loss=0.0266 lr=9.81e-05 vram=10.4GB
+2026-11-15 20:53:46,771 - train_vlm_lora - INFO - step 3860/7374 loss=0.0265 lr=9.73e-05 vram=10.4GB
+2026-11-15 20:55:02,228 - train_vlm_lora - INFO - step 3880/7374 loss=0.0265 lr=9.64e-05 vram=10.4GB
+2026-11-15 20:56:18,083 - train_vlm_lora - INFO - step 3900/7374 loss=0.0264 lr=9.55e-05 vram=10.4GB
+2026-11-15 20:57:33,811 - train_vlm_lora - INFO - step 3920/7374 loss=0.0264 lr=9.46e-05 vram=10.4GB
+2026-11-15 20:58:49,369 - train_vlm_lora - INFO - step 3940/7374 loss=0.0264 lr=9.37e-05 vram=10.4GB
+2026-11-15 21:00:05,268 - train_vlm_lora - INFO - step 3960/7374 loss=0.0264 lr=9.29e-05 vram=10.4GB
+2026-11-15 21:01:21,948 - train_vlm_lora - INFO - step 3980/7374 loss=0.0263 lr=9.20e-05 vram=10.4GB
+2026-11-15 21:02:38,500 - train_vlm_lora - INFO - step 4000/7374 loss=0.0263 lr=9.11e-05 vram=10.4GB
+2026-11-15 21:03:54,039 - train_vlm_lora - INFO - step 4020/7374 loss=0.0262 lr=9.02e-05 vram=10.4GB
+2026-11-15 21:05:09,949 - train_vlm_lora - INFO - step 4040/7374 loss=0.0262 lr=8.94e-05 vram=10.4GB
+2026-11-15 21:06:26,550 - train_vlm_lora - INFO - step 4060/7374 loss=0.0262 lr=8.85e-05 vram=10.4GB
+2026-11-15 21:07:43,277 - train_vlm_lora - INFO - step 4080/7374 loss=0.0261 lr=8.76e-05 vram=10.4GB
+2026-11-15 21:09:00,127 - train_vlm_lora - INFO - step 4100/7374 loss=0.0259 lr=8.68e-05 vram=10.4GB
+2026-11-15 21:10:16,398 - train_vlm_lora - INFO - step 4120/7374 loss=0.0259 lr=8.59e-05 vram=10.4GB
+2026-11-15 21:11:31,400 - train_vlm_lora - INFO - step 4140/7374 loss=0.0258 lr=8.50e-05 vram=10.4GB
+2026-11-15 21:12:46,857 - train_vlm_lora - INFO - step 4160/7374 loss=0.0257 lr=8.41e-05 vram=10.4GB
+2026-11-15 21:14:02,491 - train_vlm_lora - INFO - step 4180/7374 loss=0.0257 lr=8.33e-05 vram=10.4GB
+2026-11-15 21:15:18,697 - train_vlm_lora - INFO - step 4200/7374 loss=0.0257 lr=8.24e-05 vram=10.4GB
+2026-11-15 21:16:34,503 - train_vlm_lora - INFO - step 4220/7374 loss=0.0257 lr=8.16e-05 vram=10.4GB
+2026-11-15 21:17:50,269 - train_vlm_lora - INFO - step 4240/7374 loss=0.0257 lr=8.07e-05 vram=10.4GB
+2026-11-15 21:19:06,407 - train_vlm_lora - INFO - step 4260/7374 loss=0.0257 lr=7.98e-05 vram=10.4GB
+2026-11-15 21:20:22,326 - train_vlm_lora - INFO - step 4280/7374 loss=0.0257 lr=7.90e-05 vram=10.4GB
+2026-11-15 21:21:37,815 - train_vlm_lora - INFO - step 4300/7374 loss=0.0257 lr=7.81e-05 vram=10.4GB
+2026-11-15 21:22:53,710 - train_vlm_lora - INFO - step 4320/7374 loss=0.0256 lr=7.73e-05 vram=10.4GB
+2026-11-15 21:24:10,405 - train_vlm_lora - INFO - step 4340/7374 loss=0.0255 lr=7.64e-05 vram=10.4GB
+2026-11-15 21:25:26,038 - train_vlm_lora - INFO - step 4360/7374 loss=0.0255 lr=7.55e-05 vram=10.4GB
+2026-11-15 21:26:41,850 - train_vlm_lora - INFO - step 4380/7374 loss=0.0254 lr=7.47e-05 vram=10.4GB
+2026-11-15 21:27:57,616 - train_vlm_lora - INFO - step 4400/7374 loss=0.0254 lr=7.38e-05 vram=10.4GB
+2026-11-15 21:29:12,986 - train_vlm_lora - INFO - step 4420/7374 loss=0.0254 lr=7.30e-05 vram=10.4GB
+2026-11-15 21:30:29,326 - train_vlm_lora - INFO - step 4440/7374 loss=0.0253 lr=7.22e-05 vram=10.4GB
+2026-11-15 21:31:45,166 - train_vlm_lora - INFO - step 4460/7374 loss=0.0253 lr=7.13e-05 vram=10.4GB
+2026-11-15 21:33:01,649 - train_vlm_lora - INFO - step 4480/7374 loss=0.0252 lr=7.05e-05 vram=10.4GB
+2026-11-15 21:34:17,777 - train_vlm_lora - INFO - step 4500/7374 loss=0.0253 lr=6.96e-05 vram=10.4GB
+2026-11-15 21:35:33,430 - train_vlm_lora - INFO - step 4520/7374 loss=0.0252 lr=6.88e-05 vram=10.4GB
+2026-11-15 21:36:50,065 - train_vlm_lora - INFO - step 4540/7374 loss=0.0253 lr=6.80e-05 vram=10.4GB
+2026-11-15 21:38:06,780 - train_vlm_lora - INFO - step 4560/7374 loss=0.0252 lr=6.71e-05 vram=10.4GB
+2026-11-15 21:39:22,459 - train_vlm_lora - INFO - step 4580/7374 loss=0.0252 lr=6.63e-05 vram=10.4GB
+2026-11-15 21:40:39,113 - train_vlm_lora - INFO - step 4600/7374 loss=0.0252 lr=6.55e-05 vram=10.4GB
+2026-11-15 21:41:55,757 - train_vlm_lora - INFO - step 4620/7374 loss=0.0251 lr=6.47e-05 vram=10.4GB
+2026-11-15 21:43:11,771 - train_vlm_lora - INFO - step 4640/7374 loss=0.0250 lr=6.38e-05 vram=10.4GB
+2026-11-15 21:44:27,923 - train_vlm_lora - INFO - step 4660/7374 loss=0.0249 lr=6.30e-05 vram=10.4GB
+2026-11-15 21:45:44,478 - train_vlm_lora - INFO - step 4680/7374 loss=0.0248 lr=6.22e-05 vram=10.4GB
+2026-11-15 21:47:01,400 - train_vlm_lora - INFO - step 4700/7374 loss=0.0248 lr=6.14e-05 vram=10.4GB
+2026-11-15 21:48:17,878 - train_vlm_lora - INFO - step 4720/7374 loss=0.0248 lr=6.06e-05 vram=10.4GB
+2026-11-15 21:49:34,357 - train_vlm_lora - INFO - step 4740/7374 loss=0.0248 lr=5.98e-05 vram=10.4GB
+2026-11-15 21:50:50,121 - train_vlm_lora - INFO - step 4760/7374 loss=0.0247 lr=5.90e-05 vram=10.4GB
+2026-11-15 21:52:05,272 - train_vlm_lora - INFO - step 4780/7374 loss=0.0246 lr=5.82e-05 vram=10.4GB
+2026-11-15 21:53:20,594 - train_vlm_lora - INFO - step 4800/7374 loss=0.0246 lr=5.74e-05 vram=10.4GB
+2026-11-15 21:54:36,050 - train_vlm_lora - INFO - step 4820/7374 loss=0.0245 lr=5.66e-05 vram=10.4GB
+2026-11-15 21:55:52,069 - train_vlm_lora - INFO - step 4840/7374 loss=0.0245 lr=5.58e-05 vram=10.4GB
+2026-11-15 21:57:07,798 - train_vlm_lora - INFO - step 4860/7374 loss=0.0245 lr=5.50e-05 vram=10.4GB
+2026-11-15 21:58:23,229 - train_vlm_lora - INFO - step 4880/7374 loss=0.0246 lr=5.42e-05 vram=10.4GB
+2026-11-15 21:59:38,459 - train_vlm_lora - INFO - step 4900/7374 loss=0.0245 lr=5.34e-05 vram=10.4GB
+2026-11-15 22:04:59,631 - train_vlm_lora - INFO -     epoch                 : 2
+2026-11-15 22:04:59,631 - train_vlm_lora - INFO -     step                  : 4916
+2026-11-15 22:04:59,631 - train_vlm_lora - INFO -     lr                    : 0.0001
+2026-11-15 22:04:59,631 - train_vlm_lora - INFO -     train_loss            : 0.0244
+2026-11-15 22:04:59,631 - train_vlm_lora - INFO -     train_acc             : nan
+2026-11-15 22:04:59,631 - train_vlm_lora - INFO -     val_loss              : nan
+2026-11-15 22:04:59,631 - train_vlm_lora - INFO -     val_accuracy_top1     : 94.3333
+2026-11-15 22:04:59,631 - train_vlm_lora - INFO -     val_macro_f1          : 92.1273
+2026-11-15 22:04:59,631 - train_vlm_lora - INFO -     val_perception_acc    : 92.7570
+2026-11-15 22:04:59,631 - train_vlm_lora - INFO -     val_perception_macro_f1: 91.1990
+2026-11-15 22:04:59,631 - train_vlm_lora - INFO -     val_presence_acc      : 98.2558
+2026-11-15 22:04:59,632 - train_vlm_lora - INFO -     val_presence_f1       : 98.1613
+2026-11-15 22:04:59,632 - train_vlm_lora - INFO -     val_consistency       : 100.0000
+2026-11-15 22:04:59,632 - train_vlm_lora - INFO -     epoch_time_sec        : 9204.9000
+2026-11-15 22:04:59,632 - train_vlm_lora - INFO -     is_best               : True
+2026-11-15 22:04:59,632 - train_vlm_lora - INFO -     peak_vram_mb          : 10654.4000
+2026-11-15 22:04:59,632 - train_vlm_lora - INFO -     n_val_samples         : 600
+2026-11-15 22:04:59,949 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-15 22:04:59,956 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-VL-4B-Instruct/ebb281ec70b05090aa6165b016eac8ec08e71b17/config.json "HTTP/1.1 200 OK"
+2026-11-15 22:05:00,240 - train_vlm_lora - INFO - Saved best_lora_adapter (val macro_f1=92.13)
+2026-11-15 22:05:00,523 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-15 22:05:00,529 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-VL-4B-Instruct/ebb281ec70b05090aa6165b016eac8ec08e71b17/config.json "HTTP/1.1 200 OK"
+2026-11-15 22:05:15,966 - train_vlm_lora - INFO - step 4920/7374 loss=0.0067 lr=5.27e-05 vram=10.4GB
+2026-11-15 22:06:31,761 - train_vlm_lora - INFO - step 4940/7374 loss=0.0155 lr=5.19e-05 vram=10.4GB
+2026-11-15 22:07:47,582 - train_vlm_lora - INFO - step 4960/7374 loss=0.0128 lr=5.11e-05 vram=10.4GB
+2026-11-15 22:09:03,991 - train_vlm_lora - INFO - step 4980/7374 loss=0.0116 lr=5.04e-05 vram=10.4GB
+2026-11-15 22:10:20,643 - train_vlm_lora - INFO - step 5000/7374 loss=0.0123 lr=4.96e-05 vram=10.4GB
+2026-11-15 22:11:36,975 - train_vlm_lora - INFO - step 5020/7374 loss=0.0125 lr=4.89e-05 vram=10.4GB
+2026-11-15 22:12:52,433 - train_vlm_lora - INFO - step 5040/7374 loss=0.0120 lr=4.81e-05 vram=10.4GB
+2026-11-15 22:14:07,871 - train_vlm_lora - INFO - step 5060/7374 loss=0.0119 lr=4.73e-05 vram=10.4GB
+2026-11-15 22:15:24,420 - train_vlm_lora - INFO - step 5080/7374 loss=0.0119 lr=4.66e-05 vram=10.4GB
+2026-11-15 22:16:40,797 - train_vlm_lora - INFO - step 5100/7374 loss=0.0120 lr=4.59e-05 vram=10.4GB
+2026-11-15 22:17:56,200 - train_vlm_lora - INFO - step 5120/7374 loss=0.0118 lr=4.51e-05 vram=10.4GB
+2026-11-15 22:19:11,766 - train_vlm_lora - INFO - step 5140/7374 loss=0.0118 lr=4.44e-05 vram=10.4GB
+2026-11-15 22:20:27,217 - train_vlm_lora - INFO - step 5160/7374 loss=0.0118 lr=4.37e-05 vram=10.4GB
+2026-11-15 22:21:42,848 - train_vlm_lora - INFO - step 5180/7374 loss=0.0115 lr=4.29e-05 vram=10.4GB
+2026-11-15 22:22:57,909 - train_vlm_lora - INFO - step 5200/7374 loss=0.0117 lr=4.22e-05 vram=10.4GB
+2026-11-15 22:24:13,286 - train_vlm_lora - INFO - step 5220/7374 loss=0.0116 lr=4.15e-05 vram=10.4GB
+2026-11-15 22:25:28,595 - train_vlm_lora - INFO - step 5240/7374 loss=0.0113 lr=4.08e-05 vram=10.4GB
+2026-11-15 22:26:44,068 - train_vlm_lora - INFO - step 5260/7374 loss=0.0114 lr=4.01e-05 vram=10.4GB
+2026-11-15 22:27:59,670 - train_vlm_lora - INFO - step 5280/7374 loss=0.0110 lr=3.94e-05 vram=10.4GB
+2026-11-15 22:29:14,752 - train_vlm_lora - INFO - step 5300/7374 loss=0.0108 lr=3.87e-05 vram=10.4GB
+2026-11-15 22:30:29,928 - train_vlm_lora - INFO - step 5320/7374 loss=0.0104 lr=3.80e-05 vram=10.4GB
+2026-11-15 22:31:45,495 - train_vlm_lora - INFO - step 5340/7374 loss=0.0105 lr=3.73e-05 vram=10.4GB
+2026-11-15 22:33:01,866 - train_vlm_lora - INFO - step 5360/7374 loss=0.0105 lr=3.66e-05 vram=10.4GB
+2026-11-15 22:34:17,738 - train_vlm_lora - INFO - step 5380/7374 loss=0.0104 lr=3.60e-05 vram=10.4GB
+2026-11-15 22:35:33,072 - train_vlm_lora - INFO - step 5400/7374 loss=0.0103 lr=3.53e-05 vram=10.4GB
+2026-11-15 22:36:49,629 - train_vlm_lora - INFO - step 5420/7374 loss=0.0105 lr=3.46e-05 vram=10.4GB
+2026-11-15 22:38:06,488 - train_vlm_lora - INFO - step 5440/7374 loss=0.0105 lr=3.40e-05 vram=10.4GB
+2026-11-15 22:39:22,674 - train_vlm_lora - INFO - step 5460/7374 loss=0.0104 lr=3.33e-05 vram=10.4GB
+2026-11-15 22:40:38,054 - train_vlm_lora - INFO - step 5480/7374 loss=0.0105 lr=3.26e-05 vram=10.4GB
+2026-11-15 22:41:54,435 - train_vlm_lora - INFO - step 5500/7374 loss=0.0103 lr=3.20e-05 vram=10.4GB
+2026-11-15 22:43:11,319 - train_vlm_lora - INFO - step 5520/7374 loss=0.0103 lr=3.14e-05 vram=10.4GB
+2026-11-15 22:44:27,048 - train_vlm_lora - INFO - step 5540/7374 loss=0.0105 lr=3.07e-05 vram=10.4GB
+2026-11-15 22:45:42,602 - train_vlm_lora - INFO - step 5560/7374 loss=0.0103 lr=3.01e-05 vram=10.4GB
+2026-11-15 22:46:57,839 - train_vlm_lora - INFO - step 5580/7374 loss=0.0103 lr=2.95e-05 vram=10.4GB
+2026-11-15 22:48:13,848 - train_vlm_lora - INFO - step 5600/7374 loss=0.0103 lr=2.88e-05 vram=10.4GB
+2026-11-15 22:49:30,242 - train_vlm_lora - INFO - step 5620/7374 loss=0.0104 lr=2.82e-05 vram=10.4GB
+2026-11-15 22:50:47,143 - train_vlm_lora - INFO - step 5640/7374 loss=0.0105 lr=2.76e-05 vram=10.4GB
+2026-11-15 22:52:03,712 - train_vlm_lora - INFO - step 5660/7374 loss=0.0104 lr=2.70e-05 vram=10.4GB
+2026-11-15 22:53:20,585 - train_vlm_lora - INFO - step 5680/7374 loss=0.0105 lr=2.64e-05 vram=10.4GB
+2026-11-15 22:54:37,228 - train_vlm_lora - INFO - step 5700/7374 loss=0.0104 lr=2.58e-05 vram=10.4GB
+2026-11-15 22:55:52,389 - train_vlm_lora - INFO - step 5720/7374 loss=0.0103 lr=2.52e-05 vram=10.4GB
+2026-11-15 22:57:07,933 - train_vlm_lora - INFO - step 5740/7374 loss=0.0103 lr=2.47e-05 vram=10.4GB
+2026-11-15 22:58:24,374 - train_vlm_lora - INFO - step 5760/7374 loss=0.0102 lr=2.41e-05 vram=10.4GB
+2026-11-15 22:59:41,539 - train_vlm_lora - INFO - step 5780/7374 loss=0.0104 lr=2.35e-05 vram=10.4GB
+2026-11-15 23:00:58,288 - train_vlm_lora - INFO - step 5800/7374 loss=0.0103 lr=2.30e-05 vram=10.4GB
+2026-11-15 23:02:14,041 - train_vlm_lora - INFO - step 5820/7374 loss=0.0102 lr=2.24e-05 vram=10.4GB
+2026-11-15 23:03:30,451 - train_vlm_lora - INFO - step 5840/7374 loss=0.0102 lr=2.19e-05 vram=10.4GB
+2026-11-15 23:04:46,727 - train_vlm_lora - INFO - step 5860/7374 loss=0.0102 lr=2.13e-05 vram=10.4GB
+2026-11-15 23:06:02,409 - train_vlm_lora - INFO - step 5880/7374 loss=0.0102 lr=2.08e-05 vram=10.4GB
+2026-11-15 23:07:17,861 - train_vlm_lora - INFO - step 5900/7374 loss=0.0102 lr=2.02e-05 vram=10.4GB
+2026-11-15 23:08:33,261 - train_vlm_lora - INFO - step 5920/7374 loss=0.0102 lr=1.97e-05 vram=10.4GB
+2026-11-15 23:09:49,212 - train_vlm_lora - INFO - step 5940/7374 loss=0.0103 lr=1.92e-05 vram=10.4GB
+2026-11-15 23:11:05,277 - train_vlm_lora - INFO - step 5960/7374 loss=0.0103 lr=1.87e-05 vram=10.4GB
+2026-11-15 23:12:22,003 - train_vlm_lora - INFO - step 5980/7374 loss=0.0103 lr=1.82e-05 vram=10.4GB
+2026-11-15 23:13:38,917 - train_vlm_lora - INFO - step 6000/7374 loss=0.0102 lr=1.77e-05 vram=10.4GB
+2026-11-15 23:14:55,359 - train_vlm_lora - INFO - step 6020/7374 loss=0.0102 lr=1.72e-05 vram=10.4GB
+2026-11-15 23:16:13,506 - train_vlm_lora - INFO - step 6040/7374 loss=0.0102 lr=1.67e-05 vram=10.4GB
+2026-11-15 23:17:28,772 - train_vlm_lora - INFO - step 6060/7374 loss=0.0101 lr=1.62e-05 vram=10.4GB
+2026-11-15 23:18:45,397 - train_vlm_lora - INFO - step 6080/7374 loss=0.0101 lr=1.57e-05 vram=10.4GB
+2026-11-15 23:20:01,739 - train_vlm_lora - INFO - step 6100/7374 loss=0.0102 lr=1.53e-05 vram=10.4GB
+2026-11-15 23:21:17,166 - train_vlm_lora - INFO - step 6120/7374 loss=0.0102 lr=1.48e-05 vram=10.4GB
+2026-11-15 23:22:33,328 - train_vlm_lora - INFO - step 6140/7374 loss=0.0102 lr=1.43e-05 vram=10.4GB
+2026-11-15 23:23:48,716 - train_vlm_lora - INFO - step 6160/7374 loss=0.0103 lr=1.39e-05 vram=10.4GB
+2026-11-15 23:25:04,082 - train_vlm_lora - INFO - step 6180/7374 loss=0.0102 lr=1.34e-05 vram=10.4GB
+2026-11-15 23:26:20,914 - train_vlm_lora - INFO - step 6200/7374 loss=0.0102 lr=1.30e-05 vram=10.4GB
+2026-11-15 23:27:36,258 - train_vlm_lora - INFO - step 6220/7374 loss=0.0102 lr=1.26e-05 vram=10.4GB
+2026-11-15 23:28:51,469 - train_vlm_lora - INFO - step 6240/7374 loss=0.0102 lr=1.21e-05 vram=10.4GB
+2026-11-15 23:30:07,709 - train_vlm_lora - INFO - step 6260/7374 loss=0.0102 lr=1.17e-05 vram=10.4GB
+2026-11-15 23:31:24,174 - train_vlm_lora - INFO - step 6280/7374 loss=0.0102 lr=1.13e-05 vram=10.4GB
+2026-11-15 23:32:40,352 - train_vlm_lora - INFO - step 6300/7374 loss=0.0102 lr=1.09e-05 vram=10.4GB
+2026-11-15 23:33:55,566 - train_vlm_lora - INFO - step 6320/7374 loss=0.0102 lr=1.05e-05 vram=10.4GB
+2026-11-15 23:35:10,842 - train_vlm_lora - INFO - step 6340/7374 loss=0.0102 lr=1.01e-05 vram=10.4GB
+2026-11-15 23:36:25,984 - train_vlm_lora - INFO - step 6360/7374 loss=0.0102 lr=9.75e-06 vram=10.4GB
+2026-11-15 23:37:41,447 - train_vlm_lora - INFO - step 6380/7374 loss=0.0101 lr=9.38e-06 vram=10.4GB
+2026-11-15 23:38:56,737 - train_vlm_lora - INFO - step 6400/7374 loss=0.0102 lr=9.01e-06 vram=10.4GB
+2026-11-15 23:40:12,402 - train_vlm_lora - INFO - step 6420/7374 loss=0.0101 lr=8.65e-06 vram=10.4GB
+2026-11-15 23:41:27,689 - train_vlm_lora - INFO - step 6440/7374 loss=0.0100 lr=8.30e-06 vram=10.4GB
+2026-11-15 23:42:43,227 - train_vlm_lora - INFO - step 6460/7374 loss=0.0101 lr=7.95e-06 vram=10.4GB
+2026-11-15 23:43:58,877 - train_vlm_lora - INFO - step 6480/7374 loss=0.0101 lr=7.61e-06 vram=10.4GB
+2026-11-15 23:45:15,151 - train_vlm_lora - INFO - step 6500/7374 loss=0.0101 lr=7.28e-06 vram=10.4GB
+2026-11-15 23:46:31,685 - train_vlm_lora - INFO - step 6520/7374 loss=0.0100 lr=6.95e-06 vram=10.4GB
+2026-11-15 23:47:48,537 - train_vlm_lora - INFO - step 6540/7374 loss=0.0100 lr=6.63e-06 vram=10.4GB
+2026-11-15 23:49:05,061 - train_vlm_lora - INFO - step 6560/7374 loss=0.0100 lr=6.32e-06 vram=10.4GB
+2026-11-15 23:50:21,804 - train_vlm_lora - INFO - step 6580/7374 loss=0.0100 lr=6.02e-06 vram=10.4GB
+2026-11-15 23:51:37,597 - train_vlm_lora - INFO - step 6600/7374 loss=0.0100 lr=5.72e-06 vram=10.4GB
+2026-11-15 23:52:53,338 - train_vlm_lora - INFO - step 6620/7374 loss=0.0100 lr=5.43e-06 vram=10.4GB
+2026-11-15 23:54:09,624 - train_vlm_lora - INFO - step 6640/7374 loss=0.0099 lr=5.15e-06 vram=10.4GB
+2026-11-15 23:55:25,092 - train_vlm_lora - INFO - step 6660/7374 loss=0.0099 lr=4.88e-06 vram=10.4GB
+2026-11-15 23:56:40,547 - train_vlm_lora - INFO - step 6680/7374 loss=0.0099 lr=4.61e-06 vram=10.4GB
+2026-11-15 23:57:56,402 - train_vlm_lora - INFO - step 6700/7374 loss=0.0099 lr=4.35e-06 vram=10.4GB
+2026-11-15 23:59:11,920 - train_vlm_lora - INFO - step 6720/7374 loss=0.0099 lr=4.10e-06 vram=10.4GB
+2026-11-16 00:00:27,831 - train_vlm_lora - INFO - step 6740/7374 loss=0.0099 lr=3.85e-06 vram=10.4GB
+2026-11-16 00:01:44,420 - train_vlm_lora - INFO - step 6760/7374 loss=0.0099 lr=3.61e-06 vram=10.4GB
+2026-11-16 00:03:00,858 - train_vlm_lora - INFO - step 6780/7374 loss=0.0099 lr=3.38e-06 vram=10.4GB
+2026-11-16 00:04:16,348 - train_vlm_lora - INFO - step 6800/7374 loss=0.0098 lr=3.16e-06 vram=10.4GB
+2026-11-16 00:05:31,568 - train_vlm_lora - INFO - step 6820/7374 loss=0.0098 lr=2.95e-06 vram=10.4GB
+2026-11-16 00:06:48,250 - train_vlm_lora - INFO - step 6840/7374 loss=0.0098 lr=2.74e-06 vram=10.4GB
+2026-11-16 00:08:05,206 - train_vlm_lora - INFO - step 6860/7374 loss=0.0098 lr=2.54e-06 vram=10.4GB
+2026-11-16 00:09:21,314 - train_vlm_lora - INFO - step 6880/7374 loss=0.0097 lr=2.34e-06 vram=10.4GB
+2026-11-16 00:10:37,333 - train_vlm_lora - INFO - step 6900/7374 loss=0.0098 lr=2.16e-06 vram=10.4GB
+2026-11-16 00:11:54,055 - train_vlm_lora - INFO - step 6920/7374 loss=0.0097 lr=1.98e-06 vram=10.4GB
+2026-11-16 00:13:10,816 - train_vlm_lora - INFO - step 6940/7374 loss=0.0098 lr=1.81e-06 vram=10.4GB
+2026-11-16 00:14:26,735 - train_vlm_lora - INFO - step 6960/7374 loss=0.0097 lr=1.65e-06 vram=10.4GB
+2026-11-16 00:15:42,212 - train_vlm_lora - INFO - step 6980/7374 loss=0.0097 lr=1.49e-06 vram=10.4GB
+2026-11-16 00:16:57,555 - train_vlm_lora - INFO - step 7000/7374 loss=0.0097 lr=1.35e-06 vram=10.4GB
+2026-11-16 00:18:13,440 - train_vlm_lora - INFO - step 7020/7374 loss=0.0097 lr=1.21e-06 vram=10.4GB
+2026-11-16 00:19:29,033 - train_vlm_lora - INFO - step 7040/7374 loss=0.0097 lr=1.07e-06 vram=10.4GB
+2026-11-16 00:20:45,172 - train_vlm_lora - INFO - step 7060/7374 loss=0.0097 lr=9.49e-07 vram=10.4GB
+2026-11-16 00:22:01,117 - train_vlm_lora - INFO - step 7080/7374 loss=0.0097 lr=8.33e-07 vram=10.4GB
+2026-11-16 00:23:15,937 - train_vlm_lora - INFO - step 7100/7374 loss=0.0096 lr=7.23e-07 vram=10.4GB
+2026-11-16 00:24:31,924 - train_vlm_lora - INFO - step 7120/7374 loss=0.0096 lr=6.22e-07 vram=10.4GB
+2026-11-16 00:25:47,787 - train_vlm_lora - INFO - step 7140/7374 loss=0.0097 lr=5.28e-07 vram=10.4GB
+2026-11-16 00:27:04,134 - train_vlm_lora - INFO - step 7160/7374 loss=0.0096 lr=4.41e-07 vram=10.4GB
+2026-11-16 00:28:20,341 - train_vlm_lora - INFO - step 7180/7374 loss=0.0096 lr=3.63e-07 vram=10.4GB
+2026-11-16 00:29:36,560 - train_vlm_lora - INFO - step 7200/7374 loss=0.0096 lr=2.92e-07 vram=10.4GB
+2026-11-16 00:30:51,689 - train_vlm_lora - INFO - step 7220/7374 loss=0.0096 lr=2.29e-07 vram=10.4GB
+2026-11-16 00:32:06,975 - train_vlm_lora - INFO - step 7240/7374 loss=0.0096 lr=1.73e-07 vram=10.4GB
+2026-11-16 00:33:22,300 - train_vlm_lora - INFO - step 7260/7374 loss=0.0096 lr=1.25e-07 vram=10.4GB
+2026-11-16 00:34:38,143 - train_vlm_lora - INFO - step 7280/7374 loss=0.0096 lr=8.52e-08 vram=10.4GB
+2026-11-16 00:35:54,521 - train_vlm_lora - INFO - step 7300/7374 loss=0.0096 lr=5.28e-08 vram=10.4GB
+2026-11-16 00:37:10,698 - train_vlm_lora - INFO - step 7320/7374 loss=0.0095 lr=2.81e-08 vram=10.4GB
+2026-11-16 00:38:27,061 - train_vlm_lora - INFO - step 7340/7374 loss=0.0095 lr=1.11e-08 vram=10.4GB
+2026-11-16 00:39:42,793 - train_vlm_lora - INFO - step 7360/7374 loss=0.0095 lr=1.89e-09 vram=10.4GB
+2026-11-16 00:44:54,311 - train_vlm_lora - INFO -     epoch                 : 3
+2026-11-16 00:44:54,311 - train_vlm_lora - INFO -     step                  : 7374
+2026-11-16 00:44:54,311 - train_vlm_lora - INFO -     lr                    : 0.0000
+2026-11-16 00:44:54,311 - train_vlm_lora - INFO -     train_loss            : 0.0095
+2026-11-16 00:44:54,311 - train_vlm_lora - INFO -     train_acc             : nan
+2026-11-16 00:44:54,311 - train_vlm_lora - INFO -     val_loss              : nan
+2026-11-16 00:44:54,311 - train_vlm_lora - INFO -     val_accuracy_top1     : 96.0000
+2026-11-16 00:44:54,311 - train_vlm_lora - INFO -     val_macro_f1          : 94.7109
+2026-11-16 00:44:54,311 - train_vlm_lora - INFO -     val_perception_acc    : 94.8598
+2026-11-16 00:44:54,311 - train_vlm_lora - INFO -     val_perception_macro_f1: 94.0852
+2026-11-16 00:44:54,311 - train_vlm_lora - INFO -     val_presence_acc      : 98.8372
+2026-11-16 00:44:54,311 - train_vlm_lora - INFO -     val_presence_f1       : 98.7775
+2026-11-16 00:44:54,312 - train_vlm_lora - INFO -     val_consistency       : 100.0000
+2026-11-16 00:44:54,312 - train_vlm_lora - INFO -     epoch_time_sec        : 9332.8000
+2026-11-16 00:44:54,312 - train_vlm_lora - INFO -     is_best               : True
+2026-11-16 00:44:54,312 - train_vlm_lora - INFO -     peak_vram_mb          : 10654.4000
+2026-11-16 00:44:54,312 - train_vlm_lora - INFO -     n_val_samples         : 600
+2026-11-16 00:44:54,628 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-16 00:44:54,634 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-VL-4B-Instruct/ebb281ec70b05090aa6165b016eac8ec08e71b17/config.json "HTTP/1.1 200 OK"
+2026-11-16 00:44:54,854 - train_vlm_lora - INFO - Saved best_lora_adapter (val macro_f1=94.71)
+2026-11-16 00:44:55,146 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-16 00:44:55,151 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen3-VL-4B-Instruct/ebb281ec70b05090aa6165b016eac8ec08e71b17/config.json "HTTP/1.1 200 OK"
+2026-11-16 00:44:55,359 - train_vlm_lora - INFO - Training finished. Best val macro_f1=94.71. Adapters in logs/lvlm_reference/qwen3vl_4b_lora_3ep_paraphrases\seed42
+2026-11-16 00:45:38,910 - eval_vlm - INFO - === qwen3vl_4b_lora_3ep_paraphrases | mode=constrained | split=test | adapter=logs/lvlm_reference/qwen3vl_4b_lora_3ep_paraphrases\seed42\best_lora_adapter | paraphrase=False | limit=None | git=None
+2026-11-16 00:45:39,118 - eval_vlm - INFO - test samples: 10935
+2026-11-16 00:45:58,747 - eval_vlm - INFO - Parameters: {'total_params_M': 4449.612, 'trainable_params_M': 11.796}
+2026-11-16 00:49:35,627 - eval_vlm - INFO - Constrained [500/10935] acc_so_far=83.20% ms/sample=427.4
+2026-11-16 00:53:11,116 - eval_vlm - INFO - Constrained [1000/10935] acc_so_far=86.80% ms/sample=426.1
+2026-11-16 00:56:46,998 - eval_vlm - INFO - Constrained [1500/10935] acc_so_far=86.53% ms/sample=426.0
+2026-11-16 01:00:22,416 - eval_vlm - INFO - Constrained [2000/10935] acc_so_far=87.20% ms/sample=425.3
+2026-11-16 01:03:57,370 - eval_vlm - INFO - Constrained [2500/10935] acc_so_far=87.52% ms/sample=424.9
+2026-11-16 01:07:32,624 - eval_vlm - INFO - Constrained [3000/10935] acc_so_far=88.70% ms/sample=424.9
+2026-11-16 01:11:07,898 - eval_vlm - INFO - Constrained [3500/10935] acc_so_far=88.43% ms/sample=424.9
+2026-11-16 01:14:42,860 - eval_vlm - INFO - Constrained [4000/10935] acc_so_far=89.47% ms/sample=424.6
+2026-11-16 01:18:18,822 - eval_vlm - INFO - Constrained [4500/10935] acc_so_far=89.49% ms/sample=424.6
+2026-11-16 01:21:55,551 - eval_vlm - INFO - Constrained [5000/10935] acc_so_far=89.28% ms/sample=424.7
+2026-11-16 01:25:31,377 - eval_vlm - INFO - Constrained [5500/10935] acc_so_far=90.13% ms/sample=424.7
+2026-11-16 01:29:07,106 - eval_vlm - INFO - Constrained [6000/10935] acc_so_far=90.35% ms/sample=424.7
+2026-11-16 01:32:43,229 - eval_vlm - INFO - Constrained [6500/10935] acc_so_far=90.86% ms/sample=424.7
+2026-11-16 01:36:18,495 - eval_vlm - INFO - Constrained [7000/10935] acc_so_far=91.49% ms/sample=424.7
+2026-11-16 01:39:53,865 - eval_vlm - INFO - Constrained [7500/10935] acc_so_far=92.01% ms/sample=424.7
+2026-11-16 01:43:29,808 - eval_vlm - INFO - Constrained [8000/10935] acc_so_far=92.49% ms/sample=424.8
+2026-11-16 01:47:05,152 - eval_vlm - INFO - Constrained [8500/10935] acc_so_far=92.93% ms/sample=424.8
+2026-11-16 01:50:41,029 - eval_vlm - INFO - Constrained [9000/10935] acc_so_far=93.08% ms/sample=424.8
+2026-11-16 01:54:16,540 - eval_vlm - INFO - Constrained [9500/10935] acc_so_far=93.37% ms/sample=424.7
+2026-11-16 01:57:53,336 - eval_vlm - INFO - Constrained [10000/10935] acc_so_far=93.65% ms/sample=424.7
+2026-11-16 02:01:29,417 - eval_vlm - INFO - Constrained [10500/10935] acc_so_far=93.91% ms/sample=424.7
+2026-11-16 02:04:37,121 - eval_vlm - INFO - Constrained [10935/10935] acc_so_far=93.96% ms/sample=424.6
+2026-11-16 02:04:37,161 - eval_vlm - INFO - Results:
+2026-11-16 02:04:37,161 - eval_vlm - INFO -     accuracy_top1           : 93.9643
+2026-11-16 02:04:37,161 - eval_vlm - INFO -     macro_f1                : 93.1957
+2026-11-16 02:04:37,161 - eval_vlm - INFO -     perception_acc          : 92.7295
+2026-11-16 02:04:37,161 - eval_vlm - INFO -     perception_macro_f1     : 92.5226
+2026-11-16 02:04:37,161 - eval_vlm - INFO -     presence_acc            : 97.7122
+2026-11-16 02:04:37,161 - eval_vlm - INFO -     presence_f1             : 97.5707
+2026-11-16 02:04:37,161 - eval_vlm - INFO -     consistency             : 98.7823
+2026-11-16 02:04:37,161 - eval_vlm - INFO -     n_unmapped              : 0
+2026-11-16 02:04:37,161 - eval_vlm - INFO -     infer_ms_per_sample     : 424.6107
+2026-11-16 02:04:37,161 - eval_vlm - INFO -     peak_vram_mb            : 9247.0000
+2026-11-16 02:04:37,161 - eval_vlm - INFO -     total_params_M          : 4449.6120
+2026-11-16 02:04:37,161 - eval_vlm - INFO -     trainable_params_M      : 11.7960
+2026-11-16 02:04:37,310 - eval_vlm - INFO - Saved logs/lvlm_reference/qwen3vl_4b_lora_3ep_paraphrases\seed42\test_metrics.json (+ copy in checkpoints\lmm\results_flat)
+2026-11-16 02:04:55,877 - eval_vlm - INFO - === qwen3vl_4b_lora_3ep_paraphrases | mode=constrained | split=test | adapter=logs/lvlm_reference/qwen3vl_4b_lora_3ep_paraphrases\seed42\best_lora_adapter | paraphrase=True | limit=None | git=None
+2026-11-16 02:04:56,090 - eval_vlm - INFO - test samples: 10935
+2026-11-16 02:05:12,799 - eval_vlm - INFO - Parameters: {'total_params_M': 4449.612, 'trainable_params_M': 11.796}
+2026-11-16 02:08:46,832 - eval_vlm - INFO - Constrained [500/10935] acc_so_far=83.40% ms/sample=425.4
+2026-11-16 02:12:19,535 - eval_vlm - INFO - Constrained [1000/10935] acc_so_far=86.40% ms/sample=424.0
+2026-11-16 02:15:52,132 - eval_vlm - INFO - Constrained [1500/10935] acc_so_far=86.40% ms/sample=423.5
+2026-11-16 02:19:23,564 - eval_vlm - INFO - Constrained [2000/10935] acc_so_far=87.15% ms/sample=422.7
+2026-11-16 02:22:55,394 - eval_vlm - INFO - Constrained [2500/10935] acc_so_far=87.60% ms/sample=422.3
+2026-11-16 02:26:01,140 - eval_vlm - INFO - Constrained [3000/10935] acc_so_far=88.70% ms/sample=413.3
+2026-11-16 02:29:25,313 - eval_vlm - INFO - Constrained [3500/10935] acc_so_far=88.46% ms/sample=411.8
+2026-11-16 02:31:34,696 - eval_vlm - INFO - Constrained [4000/10935] acc_so_far=89.55% ms/sample=392.2
+2026-11-16 02:34:51,633 - eval_vlm - INFO - Constrained [4500/10935] acc_so_far=89.53% ms/sample=392.0
+2026-11-16 02:38:18,161 - eval_vlm - INFO - Constrained [5000/10935] acc_so_far=89.34% ms/sample=393.7
+2026-11-16 02:41:48,233 - eval_vlm - INFO - Constrained [5500/10935] acc_so_far=90.18% ms/sample=395.6
+2026-11-16 02:45:19,772 - eval_vlm - INFO - Constrained [6000/10935] acc_so_far=90.38% ms/sample=397.5
+2026-11-16 02:48:42,707 - eval_vlm - INFO - Constrained [6500/10935] acc_so_far=90.89% ms/sample=397.9
+2026-11-16 02:52:12,412 - eval_vlm - INFO - Constrained [7000/10935] acc_so_far=91.51% ms/sample=399.0
+2026-11-16 02:55:40,999 - eval_vlm - INFO - Constrained [7500/10935] acc_so_far=92.03% ms/sample=400.0
+2026-11-16 02:59:16,790 - eval_vlm - INFO - Constrained [8000/10935] acc_so_far=92.50% ms/sample=401.8
+2026-11-16 03:02:52,664 - eval_vlm - INFO - Constrained [8500/10935] acc_so_far=92.94% ms/sample=403.4
+2026-11-16 03:06:25,417 - eval_vlm - INFO - Constrained [9000/10935] acc_so_far=93.12% ms/sample=404.4
+2026-11-16 03:09:55,591 - eval_vlm - INFO - Constrained [9500/10935] acc_so_far=93.41% ms/sample=405.1
+2026-11-16 03:13:16,893 - eval_vlm - INFO - Constrained [10000/10935] acc_so_far=93.69% ms/sample=404.8
+2026-11-16 03:16:48,019 - eval_vlm - INFO - Constrained [10500/10935] acc_so_far=93.96% ms/sample=405.5
+2026-11-16 03:19:46,696 - eval_vlm - INFO - Constrained [10935/10935] acc_so_far=94.02% ms/sample=405.6
+2026-11-16 03:19:46,753 - eval_vlm - INFO - Results:
+2026-11-16 03:19:46,753 - eval_vlm - INFO -     accuracy_top1           : 94.0192
+2026-11-16 03:19:46,753 - eval_vlm - INFO -     macro_f1                : 93.2167
+2026-11-16 03:19:46,753 - eval_vlm - INFO -     perception_acc          : 92.7781
+2026-11-16 03:19:46,753 - eval_vlm - INFO -     perception_macro_f1     : 92.5348
+2026-11-16 03:19:46,753 - eval_vlm - INFO -     presence_acc            : 97.7860
+2026-11-16 03:19:46,753 - eval_vlm - INFO -     presence_f1             : 97.6491
+2026-11-16 03:19:46,753 - eval_vlm - INFO -     consistency             : 98.5978
+2026-11-16 03:19:46,753 - eval_vlm - INFO -     n_unmapped              : 0
+2026-11-16 03:19:46,753 - eval_vlm - INFO -     infer_ms_per_sample     : 405.5650
+2026-11-16 03:19:46,753 - eval_vlm - INFO -     peak_vram_mb            : 9277.9000
+2026-11-16 03:19:46,753 - eval_vlm - INFO -     total_params_M          : 4449.6120
+2026-11-16 03:19:46,753 - eval_vlm - INFO -     trainable_params_M      : 11.7960
+2026-11-16 03:19:46,830 - eval_vlm - INFO - Saved logs/lvlm_reference/qwen3vl_4b_lora_3ep_paraphrases\seed42\test_metrics_paraphrase.json (+ copy in checkpoints\lmm\results_flat)
+2026-11-16 03:26:29,980 - eval_vlm - INFO - === qwen3vl_4b_lora_3ep_paraphrases | mode=constrained | split=test | adapter=../checkpoints/lmm/models/qwen3vl_4b_lora_3ep_paraphrases/seed42/best_lora_adapter | paraphrase=False | limit=300 | git=None
+2026-11-16 03:26:30,163 - eval_vlm - INFO - test samples: 300
+2026-11-16 03:27:07,763 - eval_vlm - INFO - === qwen3vl_4b_lora_3ep_paraphrases | mode=constrained | split=test | adapter=checkpoints/lmm/models/qwen3vl_4b_lora_3ep_paraphrases/seed42/best_lora_adapter | paraphrase=False | limit=300 | git=None
+2026-11-16 03:27:08,012 - eval_vlm - INFO - test samples: 300
+2026-11-16 03:27:23,904 - eval_vlm - INFO - Parameters: {'total_params_M': 4449.612, 'trainable_params_M': 11.796}
+2026-11-16 03:29:28,386 - eval_vlm - INFO - Constrained [300/300] acc_so_far=95.33% ms/sample=411.7
+2026-11-16 03:29:28,403 - eval_vlm - INFO - Results:
+2026-11-16 03:29:28,403 - eval_vlm - INFO -     accuracy_top1           : 95.3333
+2026-11-16 03:29:28,403 - eval_vlm - INFO -     macro_f1                : 92.4029
+2026-11-16 03:29:28,403 - eval_vlm - INFO -     perception_acc          : 92.6667
+2026-11-16 03:29:28,403 - eval_vlm - INFO -     perception_macro_f1     : 91.5617
+2026-11-16 03:29:28,403 - eval_vlm - INFO -     presence_acc            : 98.0000
+2026-11-16 03:29:28,403 - eval_vlm - INFO -     presence_f1             : 97.8704
+2026-11-16 03:29:28,403 - eval_vlm - INFO -     consistency             : 100.0000
+2026-11-16 03:29:28,403 - eval_vlm - INFO -     n_unmapped              : 0
+2026-11-16 03:29:28,403 - eval_vlm - INFO -     infer_ms_per_sample     : 411.6515
+2026-11-16 03:29:28,403 - eval_vlm - INFO -     peak_vram_mb            : 9247.0000
+2026-11-16 03:29:28,403 - eval_vlm - INFO -     total_params_M          : 4449.6120
+2026-11-16 03:29:28,403 - eval_vlm - INFO -     trainable_params_M      : 11.7960
+2026-11-16 03:29:28,416 - eval_vlm - INFO - Saved logs/lvlm_reference/qwen3vl_4b_lora_3ep_paraphrases\seed42\test_metrics_speedcheck_limit300.json (+ copy in checkpoints\lmm\_speedcheck)
+2026-11-16 03:34:28,621 - eval_vlm - INFO - === qwen3vl_4b_lora_3ep_paraphrases | mode=constrained | split=test | adapter=checkpoints/lmm/models/qwen3vl_4b_lora_3ep_paraphrases/seed42/best_lora_adapter | paraphrase=False | limit=100 | git=None
+2026-11-16 03:34:28,802 - eval_vlm - INFO - test samples: 100
+2026-11-16 03:34:41,247 - eval_vlm - INFO - Parameters: {'total_params_M': 4449.612, 'trainable_params_M': 11.796}
+2026-11-16 03:35:04,565 - eval_vlm - INFO - Constrained [100/100] acc_so_far=98.00% ms/sample=230.8
+2026-11-16 03:35:04,575 - eval_vlm - INFO - Results:
+2026-11-16 03:35:04,575 - eval_vlm - INFO -     accuracy_top1           : 98.0000
+2026-11-16 03:35:04,575 - eval_vlm - INFO -     macro_f1                : 81.6162
+2026-11-16 03:35:04,575 - eval_vlm - INFO -     perception_acc          : 96.0000
+2026-11-16 03:35:04,575 - eval_vlm - INFO -     perception_macro_f1     : 78.7879
+2026-11-16 03:35:04,575 - eval_vlm - INFO -     presence_acc            : 100.0000
+2026-11-16 03:35:04,575 - eval_vlm - INFO -     presence_f1             : 100.0000
+2026-11-16 03:35:04,575 - eval_vlm - INFO -     consistency             : 100.0000
+2026-11-16 03:35:04,575 - eval_vlm - INFO -     n_unmapped              : 0
+2026-11-16 03:35:04,575 - eval_vlm - INFO -     infer_ms_per_sample     : 230.7767
+2026-11-16 03:35:04,575 - eval_vlm - INFO -     peak_vram_mb            : 9247.0000
+2026-11-16 03:35:04,575 - eval_vlm - INFO -     total_params_M          : 4449.6120
+2026-11-16 03:35:04,575 - eval_vlm - INFO -     trainable_params_M      : 11.7960
+2026-11-16 03:35:04,587 - eval_vlm - INFO - Saved logs/lvlm_reference/qwen3vl_4b_lora_3ep_paraphrases\seed42\test_metrics_speedcheck_limit100.json (+ copy in checkpoints\lmm\_speedcheck)
+2026-11-16 03:35:35,116 - eval_vlm - INFO - === qwen3vl_4b_lora_3ep_paraphrases | mode=constrained | split=test | adapter=checkpoints/lmm/models/qwen3vl_4b_lora_3ep_paraphrases/seed42/best_lora_adapter | paraphrase=False | limit=300 | git=None
+2026-11-16 03:35:35,313 - eval_vlm - INFO - test samples: 300
+2026-11-16 03:35:47,647 - eval_vlm - INFO - Parameters: {'total_params_M': 4449.612, 'trainable_params_M': 11.796}
+2026-11-16 03:36:52,858 - eval_vlm - INFO - Constrained [300/300] acc_so_far=95.33% ms/sample=215.1
+2026-11-16 03:36:52,868 - eval_vlm - INFO - Results:
+2026-11-16 03:36:52,868 - eval_vlm - INFO -     accuracy_top1           : 95.3333
+2026-11-16 03:36:52,868 - eval_vlm - INFO -     macro_f1                : 92.4029
+2026-11-16 03:36:52,868 - eval_vlm - INFO -     perception_acc          : 92.6667
+2026-11-16 03:36:52,868 - eval_vlm - INFO -     perception_macro_f1     : 91.5617
+2026-11-16 03:36:52,868 - eval_vlm - INFO -     presence_acc            : 98.0000
+2026-11-16 03:36:52,868 - eval_vlm - INFO -     presence_f1             : 97.8704
+2026-11-16 03:36:52,868 - eval_vlm - INFO -     consistency             : 100.0000
+2026-11-16 03:36:52,868 - eval_vlm - INFO -     n_unmapped              : 0
+2026-11-16 03:36:52,868 - eval_vlm - INFO -     infer_ms_per_sample     : 215.0576
+2026-11-16 03:36:52,868 - eval_vlm - INFO -     peak_vram_mb            : 9247.0000
+2026-11-16 03:36:52,868 - eval_vlm - INFO -     total_params_M          : 4449.6120
+2026-11-16 03:36:52,868 - eval_vlm - INFO -     trainable_params_M      : 11.7960
+2026-11-16 03:36:52,880 - eval_vlm - INFO - Saved logs/lvlm_reference/qwen3vl_4b_lora_3ep_paraphrases\seed42\test_metrics_speedcheck_limit300.json (+ copy in checkpoints\lmm\_speedcheck)
+2026-11-16 03:37:13,503 - eval_vlm - INFO - === qwen3vl_4b_lora_3ep_paraphrases | mode=constrained | split=test | adapter=checkpoints/lmm/models/qwen3vl_4b_lora_3ep_paraphrases/seed42/best_lora_adapter | paraphrase=False | limit=300 | git=None
+2026-11-16 03:37:13,708 - eval_vlm - INFO - test samples: 300
+2026-11-16 03:37:22,202 - eval_vlm - INFO - Parameters: {'total_params_M': 4449.612, 'trainable_params_M': 11.796}
+2026-11-16 03:38:26,944 - eval_vlm - INFO - Constrained [300/300] acc_so_far=95.33% ms/sample=213.5
+2026-11-16 03:38:26,954 - eval_vlm - INFO - Results:
+2026-11-16 03:38:26,955 - eval_vlm - INFO -     accuracy_top1           : 95.3333
+2026-11-16 03:38:26,955 - eval_vlm - INFO -     macro_f1                : 92.4029
+2026-11-16 03:38:26,955 - eval_vlm - INFO -     perception_acc          : 92.6667
+2026-11-16 03:38:26,955 - eval_vlm - INFO -     perception_macro_f1     : 91.5617
+2026-11-16 03:38:26,955 - eval_vlm - INFO -     presence_acc            : 98.0000
+2026-11-16 03:38:26,955 - eval_vlm - INFO -     presence_f1             : 97.8704
+2026-11-16 03:38:26,955 - eval_vlm - INFO -     consistency             : 100.0000
+2026-11-16 03:38:26,955 - eval_vlm - INFO -     n_unmapped              : 0
+2026-11-16 03:38:26,955 - eval_vlm - INFO -     infer_ms_per_sample     : 213.5003
+2026-11-16 03:38:26,955 - eval_vlm - INFO -     peak_vram_mb            : 9247.0000
+2026-11-16 03:38:26,955 - eval_vlm - INFO -     total_params_M          : 4449.6120
+2026-11-16 03:38:26,955 - eval_vlm - INFO -     trainable_params_M      : 11.7960
+2026-11-16 03:38:26,966 - eval_vlm - INFO - Saved logs/lvlm_reference/qwen3vl_4b_lora_3ep_paraphrases\seed42\test_metrics_speedcheck_limit300.json (+ copy in checkpoints\lmm\_speedcheck)

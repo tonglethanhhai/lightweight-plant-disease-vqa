@@ -1,0 +1,78 @@
+2026-11-15 14:51:01,249 - eval_vlm - INFO - === qwen3vl_4b_zeroshot | mode=constrained | split=test | adapter=None | paraphrase=False | limit=None | git=None
+2026-11-15 14:51:01,547 - eval_vlm - INFO - test samples: 10935
+2026-11-15 14:51:15,398 - eval_vlm - INFO - Parameters: {'total_params_M': 4437.816, 'trainable_params_M': 0.0}
+2026-11-15 14:53:26,850 - eval_vlm - INFO - Constrained [500/10935] acc_so_far=27.80% ms/sample=256.6
+2026-11-15 14:55:04,761 - eval_vlm - INFO - Constrained [1000/10935] acc_so_far=35.10% ms/sample=223.3
+2026-11-15 14:57:11,730 - eval_vlm - INFO - Constrained [1500/10935] acc_so_far=40.27% ms/sample=231.5
+2026-11-15 14:59:52,542 - eval_vlm - INFO - Constrained [2000/10935] acc_so_far=31.85% ms/sample=252.1
+2026-11-15 15:02:33,760 - eval_vlm - INFO - Constrained [2500/10935] acc_so_far=30.56% ms/sample=264.9
+2026-11-15 15:05:14,356 - eval_vlm - INFO - Constrained [3000/10935] acc_so_far=32.27% ms/sample=273.3
+2026-11-15 15:07:54,166 - eval_vlm - INFO - Constrained [3500/10935] acc_so_far=35.74% ms/sample=279.2
+2026-11-15 15:10:34,620 - eval_vlm - INFO - Constrained [4000/10935] acc_so_far=33.85% ms/sample=283.5
+2026-11-15 15:13:15,661 - eval_vlm - INFO - Constrained [4500/10935] acc_so_far=33.27% ms/sample=287.0
+2026-11-15 15:15:55,828 - eval_vlm - INFO - Constrained [5000/10935] acc_so_far=30.68% ms/sample=289.5
+2026-11-15 15:18:35,817 - eval_vlm - INFO - Constrained [5500/10935] acc_so_far=35.22% ms/sample=291.7
+2026-11-15 15:21:16,336 - eval_vlm - INFO - Constrained [6000/10935] acc_so_far=34.93% ms/sample=293.6
+2026-11-15 15:23:56,969 - eval_vlm - INFO - Constrained [6500/10935] acc_so_far=34.91% ms/sample=295.2
+2026-11-15 15:26:36,052 - eval_vlm - INFO - Constrained [7000/10935] acc_so_far=36.80% ms/sample=296.4
+2026-11-15 15:29:13,809 - eval_vlm - INFO - Constrained [7500/10935] acc_so_far=40.04% ms/sample=297.3
+2026-11-15 15:31:47,806 - eval_vlm - INFO - Constrained [8000/10935] acc_so_far=43.12% ms/sample=297.6
+2026-11-15 15:34:25,521 - eval_vlm - INFO - Constrained [8500/10935] acc_so_far=46.04% ms/sample=298.4
+2026-11-15 15:37:02,790 - eval_vlm - INFO - Constrained [9000/10935] acc_so_far=43.79% ms/sample=298.8
+2026-11-15 15:39:37,776 - eval_vlm - INFO - Constrained [9500/10935] acc_so_far=42.42% ms/sample=299.0
+2026-11-15 15:42:18,012 - eval_vlm - INFO - Constrained [10000/10935] acc_so_far=41.61% ms/sample=299.6
+2026-11-15 15:44:56,397 - eval_vlm - INFO - Constrained [10500/10935] acc_so_far=40.82% ms/sample=300.0
+2026-11-15 15:47:16,576 - eval_vlm - INFO - Constrained [10935/10935] acc_so_far=40.24% ms/sample=300.6
+2026-11-15 15:47:16,637 - eval_vlm - INFO - Results:
+2026-11-15 15:47:16,637 - eval_vlm - INFO -     accuracy_top1           : 40.2378
+2026-11-15 15:47:16,637 - eval_vlm - INFO -     macro_f1                : 27.9604
+2026-11-15 15:47:16,637 - eval_vlm - INFO -     perception_acc          : 24.5957
+2026-11-15 15:47:16,637 - eval_vlm - INFO -     perception_macro_f1     : 20.1334
+2026-11-15 15:47:16,637 - eval_vlm - INFO -     presence_acc            : 87.7122
+2026-11-15 15:47:16,637 - eval_vlm - INFO -     presence_f1             : 90.3780
+2026-11-15 15:47:16,638 - eval_vlm - INFO -     consistency             : 79.5203
+2026-11-15 15:47:16,638 - eval_vlm - INFO -     n_unmapped              : 0
+2026-11-15 15:47:16,638 - eval_vlm - INFO -     infer_ms_per_sample     : 300.5961
+2026-11-15 15:47:16,638 - eval_vlm - INFO -     peak_vram_mb            : 9202.0000
+2026-11-15 15:47:16,638 - eval_vlm - INFO -     total_params_M          : 4437.8160
+2026-11-15 15:47:16,638 - eval_vlm - INFO -     trainable_params_M      : 0.0000
+2026-11-15 15:47:16,795 - eval_vlm - INFO - Saved logs/lvlm_reference/qwen3vl_4b_zeroshot\seed42\test_metrics.json (+ copy in checkpoints\lmm\results_flat)
+2026-11-15 15:47:35,408 - eval_vlm - INFO - === qwen3vl_4b_zeroshot | mode=constrained | split=test | adapter=None | paraphrase=True | limit=None | git=None
+2026-11-15 15:47:35,650 - eval_vlm - INFO - test samples: 10935
+2026-11-15 15:47:47,996 - eval_vlm - INFO - Parameters: {'total_params_M': 4437.816, 'trainable_params_M': 0.0}
+2026-11-15 15:50:25,249 - eval_vlm - INFO - Constrained [500/10935] acc_so_far=27.40% ms/sample=311.8
+2026-11-15 15:53:00,556 - eval_vlm - INFO - Constrained [1000/10935] acc_so_far=34.50% ms/sample=309.9
+2026-11-15 15:55:33,607 - eval_vlm - INFO - Constrained [1500/10935] acc_so_far=38.60% ms/sample=307.7
+2026-11-15 15:58:06,605 - eval_vlm - INFO - Constrained [2000/10935] acc_so_far=30.40% ms/sample=306.6
+2026-11-15 16:00:39,767 - eval_vlm - INFO - Constrained [2500/10935] acc_so_far=29.00% ms/sample=306.0
+2026-11-15 16:03:15,553 - eval_vlm - INFO - Constrained [3000/10935] acc_so_far=31.27% ms/sample=306.5
+2026-11-15 16:05:46,612 - eval_vlm - INFO - Constrained [3500/10935] acc_so_far=36.11% ms/sample=305.5
+2026-11-15 16:08:19,337 - eval_vlm - INFO - Constrained [4000/10935] acc_so_far=35.23% ms/sample=305.1
+2026-11-15 16:10:56,110 - eval_vlm - INFO - Constrained [4500/10935] acc_so_far=34.42% ms/sample=305.7
+2026-11-15 16:13:30,196 - eval_vlm - INFO - Constrained [5000/10935] acc_so_far=31.72% ms/sample=305.7
+2026-11-15 16:16:08,921 - eval_vlm - INFO - Constrained [5500/10935] acc_so_far=36.05% ms/sample=306.4
+2026-11-15 16:18:46,488 - eval_vlm - INFO - Constrained [6000/10935] acc_so_far=35.30% ms/sample=306.9
+2026-11-15 16:21:24,281 - eval_vlm - INFO - Constrained [6500/10935] acc_so_far=35.72% ms/sample=307.3
+2026-11-15 16:24:02,202 - eval_vlm - INFO - Constrained [7000/10935] acc_so_far=37.56% ms/sample=307.7
+2026-11-15 16:26:40,813 - eval_vlm - INFO - Constrained [7500/10935] acc_so_far=41.15% ms/sample=308.2
+2026-11-15 16:29:19,368 - eval_vlm - INFO - Constrained [8000/10935] acc_so_far=44.33% ms/sample=308.5
+2026-11-15 16:31:58,812 - eval_vlm - INFO - Constrained [8500/10935] acc_so_far=47.31% ms/sample=309.0
+2026-11-15 16:34:36,345 - eval_vlm - INFO - Constrained [9000/10935] acc_so_far=45.11% ms/sample=309.1
+2026-11-15 16:37:13,902 - eval_vlm - INFO - Constrained [9500/10935] acc_so_far=43.85% ms/sample=309.3
+2026-11-15 16:39:51,539 - eval_vlm - INFO - Constrained [10000/10935] acc_so_far=42.97% ms/sample=309.4
+2026-11-15 16:42:29,041 - eval_vlm - INFO - Constrained [10500/10935] acc_so_far=42.32% ms/sample=309.6
+2026-11-15 16:44:46,563 - eval_vlm - INFO - Constrained [10935/10935] acc_so_far=41.88% ms/sample=309.7
+2026-11-15 16:44:46,621 - eval_vlm - INFO - Results:
+2026-11-15 16:44:46,622 - eval_vlm - INFO -     accuracy_top1           : 41.8839
+2026-11-15 16:44:46,622 - eval_vlm - INFO -     macro_f1                : 27.3272
+2026-11-15 16:44:46,622 - eval_vlm - INFO -     perception_acc          : 27.5015
+2026-11-15 16:44:46,622 - eval_vlm - INFO -     perception_macro_f1     : 19.4743
+2026-11-15 16:44:46,622 - eval_vlm - INFO -     presence_acc            : 85.5351
+2026-11-15 16:44:46,622 - eval_vlm - INFO -     presence_f1             : 88.7778
+2026-11-15 16:44:46,622 - eval_vlm - INFO -     consistency             : 82.3985
+2026-11-15 16:44:46,622 - eval_vlm - INFO -     n_unmapped              : 0
+2026-11-15 16:44:46,622 - eval_vlm - INFO -     infer_ms_per_sample     : 309.6966
+2026-11-15 16:44:46,622 - eval_vlm - INFO -     peak_vram_mb            : 9232.9000
+2026-11-15 16:44:46,622 - eval_vlm - INFO -     total_params_M          : 4437.8160
+2026-11-15 16:44:46,622 - eval_vlm - INFO -     trainable_params_M      : 0.0000
+2026-11-15 16:44:46,771 - eval_vlm - INFO - Saved logs/lvlm_reference/qwen3vl_4b_zeroshot\seed42\test_metrics_paraphrase.json (+ copy in checkpoints\lmm\results_flat)

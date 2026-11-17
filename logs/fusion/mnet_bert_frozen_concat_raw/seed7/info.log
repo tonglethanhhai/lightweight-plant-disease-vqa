@@ -1,0 +1,761 @@
+2026-11-12 21:45:12,373 - train - INFO - Seed: 7 | git: None | run dir: ..\checkpoints/mnet_bert_frozen_concat_raw\seed7
+2026-11-12 21:45:12,529 - train - INFO - Answer vocabulary: 15 classes (categories=['perception', 'presence'])
+2026-11-12 21:45:12,654 - train - INFO - Train samples: 39322 | Val samples: 5581 | batch_size=64 | paraphrase=False
+2026-11-12 21:45:12,685 - timm.models._builder - INFO - Loading pretrained weights from Hugging Face hub (timm/mobilenetv3_large_100.ra_in1k)
+2026-11-12 21:45:13,150 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/timm/mobilenetv3_large_100.ra_in1k/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-11-12 21:45:13,152 - huggingface_hub.utils._http - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-11-12 21:45:13,153 - timm.models._hub - INFO - [timm/mobilenetv3_large_100.ra_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+2026-11-12 21:45:13,188 - timm.models._builder - WARNING - Unexpected keys (classifier.bias, classifier.weight, conv_head.bias, conv_head.weight) found while loading pretrained weights. This may be expected if model is being adapted.
+2026-11-12 21:45:13,722 - train - INFO - MNetBERTFrozenConcatRaw(
+  (vision): VisionEncoder(
+    (cnn): MobileNetV3Features(
+      (conv_stem): Conv2d(3, 16, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (act1): Hardswish()
+      (blocks): Sequential(
+        (0): Sequential(
+          (0): DepthwiseSeparableConv(
+            (conv_dw): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=16, bias=False)
+            (bn1): BatchNormAct2d(
+              16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): ReLU(inplace=True)
+            )
+            (aa): Identity()
+            (se): Identity()
+            (conv_pw): Conv2d(16, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn2): BatchNormAct2d(
+              16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (drop_path): Identity()
+          )
+        )
+        (1): Sequential(
+          (0): InvertedResidual(
+            (conv_pw): Conv2d(16, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNormAct2d(
+              64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): ReLU(inplace=True)
+            )
+            (conv_dw): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=64, bias=False)
+            (bn2): BatchNormAct2d(
+              64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): ReLU(inplace=True)
+            )
+            (aa): Identity()
+            (se): Identity()
+            (conv_pwl): Conv2d(64, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn3): BatchNormAct2d(
+              24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (drop_path): Identity()
+          )
+          (1): InvertedResidual(
+            (conv_pw): Conv2d(24, 72, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNormAct2d(
+              72, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): ReLU(inplace=True)
+            )
+            (conv_dw): Conv2d(72, 72, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=72, bias=False)
+            (bn2): BatchNormAct2d(
+              72, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): ReLU(inplace=True)
+            )
+            (aa): Identity()
+            (se): Identity()
+            (conv_pwl): Conv2d(72, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn3): BatchNormAct2d(
+              24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (drop_path): Identity()
+          )
+        )
+        (2): Sequential(
+          (0): InvertedResidual(
+            (conv_pw): Conv2d(24, 72, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNormAct2d(
+              72, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): ReLU(inplace=True)
+            )
+            (conv_dw): Conv2d(72, 72, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=72, bias=False)
+            (bn2): BatchNormAct2d(
+              72, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): ReLU(inplace=True)
+            )
+            (aa): Identity()
+            (se): SqueezeExcite(
+              (conv_reduce): Conv2d(72, 24, kernel_size=(1, 1), stride=(1, 1))
+              (act1): ReLU(inplace=True)
+              (conv_expand): Conv2d(24, 72, kernel_size=(1, 1), stride=(1, 1))
+              (gate): Hardsigmoid()
+            )
+            (conv_pwl): Conv2d(72, 40, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn3): BatchNormAct2d(
+              40, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (drop_path): Identity()
+          )
+          (1): InvertedResidual(
+            (conv_pw): Conv2d(40, 120, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNormAct2d(
+              120, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): ReLU(inplace=True)
+            )
+            (conv_dw): Conv2d(120, 120, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=120, bias=False)
+            (bn2): BatchNormAct2d(
+              120, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): ReLU(inplace=True)
+            )
+            (aa): Identity()
+            (se): SqueezeExcite(
+              (conv_reduce): Conv2d(120, 32, kernel_size=(1, 1), stride=(1, 1))
+              (act1): ReLU(inplace=True)
+              (conv_expand): Conv2d(32, 120, kernel_size=(1, 1), stride=(1, 1))
+              (gate): Hardsigmoid()
+            )
+            (conv_pwl): Conv2d(120, 40, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn3): BatchNormAct2d(
+              40, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (drop_path): Identity()
+          )
+          (2): InvertedResidual(
+            (conv_pw): Conv2d(40, 120, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNormAct2d(
+              120, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): ReLU(inplace=True)
+            )
+            (conv_dw): Conv2d(120, 120, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=120, bias=False)
+            (bn2): BatchNormAct2d(
+              120, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): ReLU(inplace=True)
+            )
+            (aa): Identity()
+            (se): SqueezeExcite(
+              (conv_reduce): Conv2d(120, 32, kernel_size=(1, 1), stride=(1, 1))
+              (act1): ReLU(inplace=True)
+              (conv_expand): Conv2d(32, 120, kernel_size=(1, 1), stride=(1, 1))
+              (gate): Hardsigmoid()
+            )
+            (conv_pwl): Conv2d(120, 40, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn3): BatchNormAct2d(
+              40, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (drop_path): Identity()
+          )
+        )
+        (3): Sequential(
+          (0): InvertedResidual(
+            (conv_pw): Conv2d(40, 240, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNormAct2d(
+              240, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (conv_dw): Conv2d(240, 240, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=240, bias=False)
+            (bn2): BatchNormAct2d(
+              240, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (aa): Identity()
+            (se): Identity()
+            (conv_pwl): Conv2d(240, 80, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn3): BatchNormAct2d(
+              80, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (drop_path): Identity()
+          )
+          (1): InvertedResidual(
+            (conv_pw): Conv2d(80, 200, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNormAct2d(
+              200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (conv_dw): Conv2d(200, 200, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=200, bias=False)
+            (bn2): BatchNormAct2d(
+              200, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (aa): Identity()
+            (se): Identity()
+            (conv_pwl): Conv2d(200, 80, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn3): BatchNormAct2d(
+              80, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (drop_path): Identity()
+          )
+          (2): InvertedResidual(
+            (conv_pw): Conv2d(80, 184, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNormAct2d(
+              184, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (conv_dw): Conv2d(184, 184, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=184, bias=False)
+            (bn2): BatchNormAct2d(
+              184, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (aa): Identity()
+            (se): Identity()
+            (conv_pwl): Conv2d(184, 80, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn3): BatchNormAct2d(
+              80, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (drop_path): Identity()
+          )
+          (3): InvertedResidual(
+            (conv_pw): Conv2d(80, 184, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNormAct2d(
+              184, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (conv_dw): Conv2d(184, 184, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=184, bias=False)
+            (bn2): BatchNormAct2d(
+              184, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (aa): Identity()
+            (se): Identity()
+            (conv_pwl): Conv2d(184, 80, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn3): BatchNormAct2d(
+              80, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (drop_path): Identity()
+          )
+        )
+        (4): Sequential(
+          (0): InvertedResidual(
+            (conv_pw): Conv2d(80, 480, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNormAct2d(
+              480, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (conv_dw): Conv2d(480, 480, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=480, bias=False)
+            (bn2): BatchNormAct2d(
+              480, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (aa): Identity()
+            (se): SqueezeExcite(
+              (conv_reduce): Conv2d(480, 120, kernel_size=(1, 1), stride=(1, 1))
+              (act1): ReLU(inplace=True)
+              (conv_expand): Conv2d(120, 480, kernel_size=(1, 1), stride=(1, 1))
+              (gate): Hardsigmoid()
+            )
+            (conv_pwl): Conv2d(480, 112, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn3): BatchNormAct2d(
+              112, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (drop_path): Identity()
+          )
+          (1): InvertedResidual(
+            (conv_pw): Conv2d(112, 672, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNormAct2d(
+              672, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (conv_dw): Conv2d(672, 672, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=672, bias=False)
+            (bn2): BatchNormAct2d(
+              672, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (aa): Identity()
+            (se): SqueezeExcite(
+              (conv_reduce): Conv2d(672, 168, kernel_size=(1, 1), stride=(1, 1))
+              (act1): ReLU(inplace=True)
+              (conv_expand): Conv2d(168, 672, kernel_size=(1, 1), stride=(1, 1))
+              (gate): Hardsigmoid()
+            )
+            (conv_pwl): Conv2d(672, 112, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn3): BatchNormAct2d(
+              112, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (drop_path): Identity()
+          )
+        )
+        (5): Sequential(
+          (0): InvertedResidual(
+            (conv_pw): Conv2d(112, 672, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNormAct2d(
+              672, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (conv_dw): Conv2d(672, 672, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=672, bias=False)
+            (bn2): BatchNormAct2d(
+              672, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (aa): Identity()
+            (se): SqueezeExcite(
+              (conv_reduce): Conv2d(672, 168, kernel_size=(1, 1), stride=(1, 1))
+              (act1): ReLU(inplace=True)
+              (conv_expand): Conv2d(168, 672, kernel_size=(1, 1), stride=(1, 1))
+              (gate): Hardsigmoid()
+            )
+            (conv_pwl): Conv2d(672, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn3): BatchNormAct2d(
+              160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (drop_path): Identity()
+          )
+          (1): InvertedResidual(
+            (conv_pw): Conv2d(160, 960, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNormAct2d(
+              960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (conv_dw): Conv2d(960, 960, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=960, bias=False)
+            (bn2): BatchNormAct2d(
+              960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (aa): Identity()
+            (se): SqueezeExcite(
+              (conv_reduce): Conv2d(960, 240, kernel_size=(1, 1), stride=(1, 1))
+              (act1): ReLU(inplace=True)
+              (conv_expand): Conv2d(240, 960, kernel_size=(1, 1), stride=(1, 1))
+              (gate): Hardsigmoid()
+            )
+            (conv_pwl): Conv2d(960, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn3): BatchNormAct2d(
+              160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (drop_path): Identity()
+          )
+          (2): InvertedResidual(
+            (conv_pw): Conv2d(160, 960, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNormAct2d(
+              960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (conv_dw): Conv2d(960, 960, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=960, bias=False)
+            (bn2): BatchNormAct2d(
+              960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (aa): Identity()
+            (se): SqueezeExcite(
+              (conv_reduce): Conv2d(960, 240, kernel_size=(1, 1), stride=(1, 1))
+              (act1): ReLU(inplace=True)
+              (conv_expand): Conv2d(240, 960, kernel_size=(1, 1), stride=(1, 1))
+              (gate): Hardsigmoid()
+            )
+            (conv_pwl): Conv2d(960, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn3): BatchNormAct2d(
+              160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Identity()
+            )
+            (drop_path): Identity()
+          )
+        )
+        (6): Sequential(
+          (0): ConvBnAct(
+            (conv): Conv2d(160, 960, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNormAct2d(
+              960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+              (drop): Identity()
+              (act): Hardswish()
+            )
+            (aa): Identity()
+            (drop_path): Identity()
+          )
+        )
+      )
+    )
+  )
+  (text): BertTextEncoder(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+    )
+    (q_proj): Identity()
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=1728, out_features=512, bias=True)
+    (1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    (2): ReLU(inplace=True)
+    (3): Dropout(p=0.2, inplace=False)
+    (4): Linear(in_features=512, out_features=15, bias=True)
+  )
+)
+Trainable parameters: 893967
+2026-11-12 21:45:13,732 - train - INFO - Parameters: {'total_params_M': 112.7576, 'trainable_params_M': 0.894}
+2026-11-12 21:45:14,391 - train - INFO - Optimizer AdamW: head params=0.894M @ lr=0.0001, backbone params=0.000M @ lr=1e-05
+2026-11-12 21:45:14,670 - trainer - INFO - AMP: True (bf16), grad_clip: 1.0, label_smoothing: 0.0
+2026-11-12 21:48:40,649 - trainer - INFO -     epoch                 : 1
+2026-11-12 21:48:40,650 - trainer - INFO -     lr                    : 0.0001
+2026-11-12 21:48:40,650 - trainer - INFO -     lrs                   : [0.0001]
+2026-11-12 21:48:40,650 - trainer - INFO -     train_loss            : 0.5658
+2026-11-12 21:48:40,650 - trainer - INFO -     train_acc             : 82.4577
+2026-11-12 21:48:40,650 - trainer - INFO -     val_loss              : 0.3581
+2026-11-12 21:48:40,650 - trainer - INFO -     val_accuracy_top1     : 88.1742
+2026-11-12 21:48:40,650 - trainer - INFO -     val_macro_f1          : 84.2177
+2026-11-12 21:48:40,650 - trainer - INFO -     val_perception_acc    : 85.2281
+2026-11-12 21:48:40,650 - trainer - INFO -     val_perception_macro_f1: 82.4328
+2026-11-12 21:48:40,650 - trainer - INFO -     val_presence_acc      : 96.0026
+2026-11-12 21:48:40,650 - trainer - INFO -     val_presence_f1       : 95.8200
+2026-11-12 21:48:40,650 - trainer - INFO -     val_consistency       : 93.4469
+2026-11-12 21:48:40,650 - trainer - INFO -     epoch_time_sec        : 205.9800
+2026-11-12 21:48:40,650 - trainer - INFO -     is_best               : True
+2026-11-12 21:48:41,552 - trainer - INFO - Saved checkpoint_last.pth (epoch 1)
+2026-11-12 21:48:42,653 - trainer - INFO - Saved model_best.pth
+2026-11-12 21:49:34,726 - trainer - INFO -     epoch                 : 2
+2026-11-12 21:49:34,727 - trainer - INFO -     lr                    : 0.0001
+2026-11-12 21:49:34,727 - trainer - INFO -     lrs                   : [9.891830623632339e-05]
+2026-11-12 21:49:34,727 - trainer - INFO -     train_loss            : 0.3104
+2026-11-12 21:49:34,727 - trainer - INFO -     train_acc             : 89.7131
+2026-11-12 21:49:34,727 - trainer - INFO -     val_loss              : 0.3033
+2026-11-12 21:49:34,727 - trainer - INFO -     val_accuracy_top1     : 89.4463
+2026-11-12 21:49:34,727 - trainer - INFO -     val_macro_f1          : 86.4558
+2026-11-12 21:49:34,727 - trainer - INFO -     val_perception_acc    : 86.7571
+2026-11-12 21:49:34,727 - trainer - INFO -     val_perception_macro_f1: 84.9211
+2026-11-12 21:49:34,727 - trainer - INFO -     val_presence_acc      : 96.5924
+2026-11-12 21:49:34,727 - trainer - INFO -     val_presence_f1       : 96.4315
+2026-11-12 21:49:34,727 - trainer - INFO -     val_consistency       : 96.6579
+2026-11-12 21:49:34,727 - trainer - INFO -     epoch_time_sec        : 52.0700
+2026-11-12 21:49:34,727 - trainer - INFO -     is_best               : True
+2026-11-12 21:49:36,161 - trainer - INFO - Saved checkpoint_last.pth (epoch 2)
+2026-11-12 21:49:37,279 - trainer - INFO - Saved model_best.pth
+2026-11-12 21:50:19,135 - trainer - INFO -     epoch                 : 3
+2026-11-12 21:50:19,135 - trainer - INFO -     lr                    : 0.0001
+2026-11-12 21:50:19,135 - trainer - INFO -     lrs                   : [9.572050015330874e-05]
+2026-11-12 21:50:19,135 - trainer - INFO -     train_loss            : 0.2543
+2026-11-12 21:50:19,135 - trainer - INFO -     train_acc             : 91.4831
+2026-11-12 21:50:19,135 - trainer - INFO -     val_loss              : 0.2479
+2026-11-12 21:50:19,135 - trainer - INFO -     val_accuracy_top1     : 91.4352
+2026-11-12 21:50:19,135 - trainer - INFO -     val_macro_f1          : 89.0255
+2026-11-12 21:50:19,135 - trainer - INFO -     val_perception_acc    : 89.4205
+2026-11-12 21:50:19,135 - trainer - INFO -     val_perception_macro_f1: 87.8546
+2026-11-12 21:50:19,135 - trainer - INFO -     val_presence_acc      : 96.7890
+2026-11-12 21:50:19,136 - trainer - INFO -     val_presence_f1       : 96.6364
+2026-11-12 21:50:19,136 - trainer - INFO -     val_consistency       : 97.6409
+2026-11-12 21:50:19,136 - trainer - INFO -     epoch_time_sec        : 41.8600
+2026-11-12 21:50:19,136 - trainer - INFO -     is_best               : True
+2026-11-12 21:50:20,155 - trainer - INFO - Saved checkpoint_last.pth (epoch 3)
+2026-11-12 21:50:21,286 - trainer - INFO - Saved model_best.pth
+2026-11-12 21:51:04,032 - trainer - INFO -     epoch                 : 4
+2026-11-12 21:51:04,032 - trainer - INFO -     lr                    : 0.0001
+2026-11-12 21:51:04,032 - trainer - INFO -     lrs                   : [9.05463412215599e-05]
+2026-11-12 21:51:04,033 - trainer - INFO -     train_loss            : 0.2217
+2026-11-12 21:51:04,033 - trainer - INFO -     train_acc             : 92.5487
+2026-11-12 21:51:04,033 - trainer - INFO -     val_loss              : 0.2261
+2026-11-12 21:51:04,033 - trainer - INFO -     val_accuracy_top1     : 91.9907
+2026-11-12 21:51:04,033 - trainer - INFO -     val_macro_f1          : 89.7407
+2026-11-12 21:51:04,033 - trainer - INFO -     val_perception_acc    : 90.1356
+2026-11-12 21:51:04,033 - trainer - INFO -     val_perception_macro_f1: 88.6596
+2026-11-12 21:51:04,033 - trainer - INFO -     val_presence_acc      : 96.9201
+2026-11-12 21:51:04,033 - trainer - INFO -     val_presence_f1       : 96.7680
+2026-11-12 21:51:04,033 - trainer - INFO -     val_consistency       : 97.4443
+2026-11-12 21:51:04,033 - trainer - INFO -     epoch_time_sec        : 42.7500
+2026-11-12 21:51:04,033 - trainer - INFO -     is_best               : True
+2026-11-12 21:51:05,133 - trainer - INFO - Saved checkpoint_last.pth (epoch 4)
+2026-11-12 21:51:06,283 - trainer - INFO - Saved model_best.pth
+2026-11-12 21:51:49,406 - trainer - INFO -     epoch                 : 5
+2026-11-12 21:51:49,406 - trainer - INFO -     lr                    : 0.0001
+2026-11-12 21:51:49,406 - trainer - INFO -     lrs                   : [8.362196501476348e-05]
+2026-11-12 21:51:49,406 - trainer - INFO -     train_loss            : 0.1989
+2026-11-12 21:51:49,406 - trainer - INFO -     train_acc             : 93.2887
+2026-11-12 21:51:49,406 - trainer - INFO -     val_loss              : 0.2286
+2026-11-12 21:51:49,406 - trainer - INFO -     val_accuracy_top1     : 92.1519
+2026-11-12 21:51:49,406 - trainer - INFO -     val_macro_f1          : 89.5583
+2026-11-12 21:51:49,406 - trainer - INFO -     val_perception_acc    : 90.1356
+2026-11-12 21:51:49,406 - trainer - INFO -     val_perception_macro_f1: 88.3510
+2026-11-12 21:51:49,406 - trainer - INFO -     val_presence_acc      : 97.5098
+2026-11-12 21:51:49,406 - trainer - INFO -     val_presence_f1       : 97.4055
+2026-11-12 21:51:49,406 - trainer - INFO -     val_consistency       : 96.9201
+2026-11-12 21:51:49,407 - trainer - INFO -     epoch_time_sec        : 43.1200
+2026-11-12 21:51:49,407 - trainer - INFO -     is_best               : False
+2026-11-12 21:51:50,307 - trainer - INFO - Saved checkpoint_last.pth (epoch 5)
+2026-11-12 21:52:32,158 - trainer - INFO -     epoch                 : 6
+2026-11-12 21:52:32,158 - trainer - INFO -     lr                    : 0.0001
+2026-11-12 21:52:32,158 - trainer - INFO -     lrs                   : [7.525e-05]
+2026-11-12 21:52:32,158 - trainer - INFO -     train_loss            : 0.1829
+2026-11-12 21:52:32,158 - trainer - INFO -     train_acc             : 93.7134
+2026-11-12 21:52:32,158 - trainer - INFO -     val_loss              : 0.1923
+2026-11-12 21:52:32,158 - trainer - INFO -     val_accuracy_top1     : 93.3166
+2026-11-12 21:52:32,158 - trainer - INFO -     val_macro_f1          : 91.4434
+2026-11-12 21:52:32,158 - trainer - INFO -     val_perception_acc    : 91.7879
+2026-11-12 21:52:32,158 - trainer - INFO -     val_perception_macro_f1: 90.5476
+2026-11-12 21:52:32,159 - trainer - INFO -     val_presence_acc      : 97.3788
+2026-11-12 21:52:32,159 - trainer - INFO -     val_presence_f1       : 97.2659
+2026-11-12 21:52:32,159 - trainer - INFO -     val_consistency       : 96.5269
+2026-11-12 21:52:32,160 - trainer - INFO -     epoch_time_sec        : 41.8500
+2026-11-12 21:52:32,160 - trainer - INFO -     is_best               : True
+2026-11-12 21:52:33,115 - trainer - INFO - Saved checkpoint_last.pth (epoch 6)
+2026-11-12 21:52:34,204 - trainer - INFO - Saved model_best.pth
+2026-11-12 21:53:17,849 - trainer - INFO -     epoch                 : 7
+2026-11-12 21:53:17,849 - trainer - INFO -     lr                    : 0.0001
+2026-11-12 21:53:17,850 - trainer - INFO -     lrs                   : [6.57963412215599e-05]
+2026-11-12 21:53:17,850 - trainer - INFO -     train_loss            : 0.1650
+2026-11-12 21:53:17,850 - trainer - INFO -     train_acc             : 94.5578
+2026-11-12 21:53:17,850 - trainer - INFO -     val_loss              : 0.1941
+2026-11-12 21:53:17,850 - trainer - INFO -     val_accuracy_top1     : 93.3345
+2026-11-12 21:53:17,850 - trainer - INFO -     val_macro_f1          : 91.6548
+2026-11-12 21:53:17,850 - trainer - INFO -     val_perception_acc    : 91.9359
+2026-11-12 21:53:17,850 - trainer - INFO -     val_perception_macro_f1: 90.8479
+2026-11-12 21:53:17,850 - trainer - INFO -     val_presence_acc      : 97.0511
+2026-11-12 21:53:17,850 - trainer - INFO -     val_presence_f1       : 96.8999
+2026-11-12 21:53:17,850 - trainer - INFO -     val_consistency       : 97.7064
+2026-11-12 21:53:17,850 - trainer - INFO -     epoch_time_sec        : 43.6400
+2026-11-12 21:53:17,850 - trainer - INFO -     is_best               : True
+2026-11-12 21:53:18,435 - trainer - INFO - Saved checkpoint_last.pth (epoch 7)
+2026-11-12 21:53:19,379 - trainer - INFO - Saved model_best.pth
+2026-11-12 21:54:00,737 - trainer - INFO -     epoch                 : 8
+2026-11-12 21:54:00,737 - trainer - INFO -     lr                    : 0.0001
+2026-11-12 21:54:00,737 - trainer - INFO -     lrs                   : [5.567415893174885e-05]
+2026-11-12 21:54:00,737 - trainer - INFO -     train_loss            : 0.1524
+2026-11-12 21:54:00,738 - trainer - INFO -     train_acc             : 94.9519
+2026-11-12 21:54:00,738 - trainer - INFO -     val_loss              : 0.1835
+2026-11-12 21:54:00,738 - trainer - INFO -     val_accuracy_top1     : 93.3345
+2026-11-12 21:54:00,738 - trainer - INFO -     val_macro_f1          : 91.1707
+2026-11-12 21:54:00,738 - trainer - INFO -     val_perception_acc    : 91.8619
+2026-11-12 21:54:00,738 - trainer - INFO -     val_perception_macro_f1: 90.2571
+2026-11-12 21:54:00,738 - trainer - INFO -     val_presence_acc      : 97.2477
+2026-11-12 21:54:00,738 - trainer - INFO -     val_presence_f1       : 97.1092
+2026-11-12 21:54:00,738 - trainer - INFO -     val_consistency       : 97.6409
+2026-11-12 21:54:00,738 - trainer - INFO -     epoch_time_sec        : 41.3600
+2026-11-12 21:54:00,738 - trainer - INFO -     is_best               : False
+2026-11-12 21:54:01,295 - trainer - INFO - Saved checkpoint_last.pth (epoch 8)
+2026-11-12 21:54:42,685 - trainer - INFO -     epoch                 : 9
+2026-11-12 21:54:42,685 - trainer - INFO -     lr                    : 0.0000
+2026-11-12 21:54:42,685 - trainer - INFO -     lrs                   : [4.532584106825116e-05]
+2026-11-12 21:54:42,685 - trainer - INFO -     train_loss            : 0.1418
+2026-11-12 21:54:42,685 - trainer - INFO -     train_acc             : 95.2469
+2026-11-12 21:54:42,685 - trainer - INFO -     val_loss              : 0.1725
+2026-11-12 21:54:42,685 - trainer - INFO -     val_accuracy_top1     : 94.0333
+2026-11-12 21:54:42,685 - trainer - INFO -     val_macro_f1          : 92.2857
+2026-11-12 21:54:42,685 - trainer - INFO -     val_perception_acc    : 92.6757
+2026-11-12 21:54:42,686 - trainer - INFO -     val_perception_macro_f1: 91.4789
+2026-11-12 21:54:42,686 - trainer - INFO -     val_presence_acc      : 97.6409
+2026-11-12 21:54:42,686 - trainer - INFO -     val_presence_f1       : 97.5295
+2026-11-12 21:54:42,686 - trainer - INFO -     val_consistency       : 98.2962
+2026-11-12 21:54:42,686 - trainer - INFO -     epoch_time_sec        : 41.3900
+2026-11-12 21:54:42,686 - trainer - INFO -     is_best               : True
+2026-11-12 21:54:43,262 - trainer - INFO - Saved checkpoint_last.pth (epoch 9)
+2026-11-12 21:54:44,481 - trainer - INFO - Saved model_best.pth
+2026-11-12 21:55:24,743 - trainer - INFO -     epoch                 : 10
+2026-11-12 21:55:24,743 - trainer - INFO -     lr                    : 0.0000
+2026-11-12 21:55:24,743 - trainer - INFO -     lrs                   : [3.5203658778440106e-05]
+2026-11-12 21:55:24,743 - trainer - INFO -     train_loss            : 0.1294
+2026-11-12 21:55:24,744 - trainer - INFO -     train_acc             : 95.7530
+2026-11-12 21:55:24,744 - trainer - INFO -     val_loss              : 0.1580
+2026-11-12 21:55:24,744 - trainer - INFO -     val_accuracy_top1     : 94.6963
+2026-11-12 21:55:24,744 - trainer - INFO -     val_macro_f1          : 93.1943
+2026-11-12 21:55:24,744 - trainer - INFO -     val_perception_acc    : 93.5635
+2026-11-12 21:55:24,744 - trainer - INFO -     val_perception_macro_f1: 92.5165
+2026-11-12 21:55:24,744 - trainer - INFO -     val_presence_acc      : 97.7064
+2026-11-12 21:55:24,744 - trainer - INFO -     val_presence_f1       : 97.6002
+2026-11-12 21:55:24,744 - trainer - INFO -     val_consistency       : 98.2307
+2026-11-12 21:55:24,744 - trainer - INFO -     epoch_time_sec        : 40.2600
+2026-11-12 21:55:24,744 - trainer - INFO -     is_best               : True
+2026-11-12 21:55:25,379 - trainer - INFO - Saved checkpoint_last.pth (epoch 10)
+2026-11-12 21:55:26,362 - trainer - INFO - Saved model_best.pth
+2026-11-12 21:56:06,118 - trainer - INFO -     epoch                 : 11
+2026-11-12 21:56:06,118 - trainer - INFO -     lr                    : 0.0000
+2026-11-12 21:56:06,118 - trainer - INFO -     lrs                   : [2.5750000000000013e-05]
+2026-11-12 21:56:06,118 - trainer - INFO -     train_loss            : 0.1210
+2026-11-12 21:56:06,118 - trainer - INFO -     train_acc             : 96.0836
+2026-11-12 21:56:06,118 - trainer - INFO -     val_loss              : 0.1547
+2026-11-12 21:56:06,118 - trainer - INFO -     val_accuracy_top1     : 94.8038
+2026-11-12 21:56:06,118 - trainer - INFO -     val_macro_f1          : 93.1811
+2026-11-12 21:56:06,118 - trainer - INFO -     val_perception_acc    : 93.6128
+2026-11-12 21:56:06,118 - trainer - INFO -     val_perception_macro_f1: 92.4588
+2026-11-12 21:56:06,118 - trainer - INFO -     val_presence_acc      : 97.9685
+2026-11-12 21:56:06,118 - trainer - INFO -     val_presence_f1       : 97.8757
+2026-11-12 21:56:06,118 - trainer - INFO -     val_consistency       : 98.3617
+2026-11-12 21:56:06,118 - trainer - INFO -     epoch_time_sec        : 39.7600
+2026-11-12 21:56:06,118 - trainer - INFO -     is_best               : False
+2026-11-12 21:56:06,671 - trainer - INFO - Saved checkpoint_last.pth (epoch 11)
+2026-11-12 21:56:46,679 - trainer - INFO -     epoch                 : 12
+2026-11-12 21:56:46,679 - trainer - INFO -     lr                    : 0.0000
+2026-11-12 21:56:46,679 - trainer - INFO -     lrs                   : [1.7378034985236535e-05]
+2026-11-12 21:56:46,679 - trainer - INFO -     train_loss            : 0.1173
+2026-11-12 21:56:46,679 - trainer - INFO -     train_acc             : 96.1396
+2026-11-12 21:56:46,679 - trainer - INFO -     val_loss              : 0.1505
+2026-11-12 21:56:46,679 - trainer - INFO -     val_accuracy_top1     : 95.0009
+2026-11-12 21:56:46,679 - trainer - INFO -     val_macro_f1          : 93.5459
+2026-11-12 21:56:46,679 - trainer - INFO -     val_perception_acc    : 93.8841
+2026-11-12 21:56:46,679 - trainer - INFO -     val_perception_macro_f1: 92.8796
+2026-11-12 21:56:46,679 - trainer - INFO -     val_presence_acc      : 97.9685
+2026-11-12 21:56:46,679 - trainer - INFO -     val_presence_f1       : 97.8769
+2026-11-12 21:56:46,679 - trainer - INFO -     val_consistency       : 98.1651
+2026-11-12 21:56:46,679 - trainer - INFO -     epoch_time_sec        : 40.0100
+2026-11-12 21:56:46,679 - trainer - INFO -     is_best               : True
+2026-11-12 21:56:47,232 - trainer - INFO - Saved checkpoint_last.pth (epoch 12)
+2026-11-12 21:56:48,488 - trainer - INFO - Saved model_best.pth
+2026-11-12 21:57:28,654 - trainer - INFO -     epoch                 : 13
+2026-11-12 21:57:28,654 - trainer - INFO -     lr                    : 0.0000
+2026-11-12 21:57:28,654 - trainer - INFO -     lrs                   : [1.0453658778440107e-05]
+2026-11-12 21:57:28,654 - trainer - INFO -     train_loss            : 0.1123
+2026-11-12 21:57:28,655 - trainer - INFO -     train_acc             : 96.3227
+2026-11-12 21:57:28,655 - trainer - INFO -     val_loss              : 0.1483
+2026-11-12 21:57:28,655 - trainer - INFO -     val_accuracy_top1     : 95.0188
+2026-11-12 21:57:28,655 - trainer - INFO -     val_macro_f1          : 93.5420
+2026-11-12 21:57:28,655 - trainer - INFO -     val_perception_acc    : 93.9334
+2026-11-12 21:57:28,655 - trainer - INFO -     val_perception_macro_f1: 92.8856
+2026-11-12 21:57:28,655 - trainer - INFO -     val_presence_acc      : 97.9030
+2026-11-12 21:57:28,655 - trainer - INFO -     val_presence_f1       : 97.8091
+2026-11-12 21:57:28,655 - trainer - INFO -     val_consistency       : 98.2307
+2026-11-12 21:57:28,655 - trainer - INFO -     epoch_time_sec        : 40.1700
+2026-11-12 21:57:28,655 - trainer - INFO -     is_best               : False
+2026-11-12 21:57:29,284 - trainer - INFO - Saved checkpoint_last.pth (epoch 13)
+2026-11-12 21:58:09,411 - trainer - INFO -     epoch                 : 14
+2026-11-12 21:58:09,411 - trainer - INFO -     lr                    : 0.0000
+2026-11-12 21:58:09,411 - trainer - INFO -     lrs                   : [5.279499846691251e-06]
+2026-11-12 21:58:09,411 - trainer - INFO -     train_loss            : 0.1073
+2026-11-12 21:58:09,411 - trainer - INFO -     train_acc             : 96.5592
+2026-11-12 21:58:09,411 - trainer - INFO -     val_loss              : 0.1462
+2026-11-12 21:58:09,411 - trainer - INFO -     val_accuracy_top1     : 95.0367
+2026-11-12 21:58:09,411 - trainer - INFO -     val_macro_f1          : 93.5547
+2026-11-12 21:58:09,411 - trainer - INFO -     val_perception_acc    : 93.9827
+2026-11-12 21:58:09,411 - trainer - INFO -     val_perception_macro_f1: 92.9114
+2026-11-12 21:58:09,411 - trainer - INFO -     val_presence_acc      : 97.8375
+2026-11-12 21:58:09,411 - trainer - INFO -     val_presence_f1       : 97.7361
+2026-11-12 21:58:09,411 - trainer - INFO -     val_consistency       : 98.2962
+2026-11-12 21:58:09,411 - trainer - INFO -     epoch_time_sec        : 40.1300
+2026-11-12 21:58:09,411 - trainer - INFO -     is_best               : True
+2026-11-12 21:58:09,962 - trainer - INFO - Saved checkpoint_last.pth (epoch 14)
+2026-11-12 21:58:11,129 - trainer - INFO - Saved model_best.pth
+2026-11-12 21:58:50,972 - trainer - INFO -     epoch                 : 15
+2026-11-12 21:58:50,972 - trainer - INFO -     lr                    : 0.0000
+2026-11-12 21:58:50,972 - trainer - INFO -     lrs                   : [2.0816937636766186e-06]
+2026-11-12 21:58:50,972 - trainer - INFO -     train_loss            : 0.1055
+2026-11-12 21:58:50,972 - trainer - INFO -     train_acc             : 96.5490
+2026-11-12 21:58:50,972 - trainer - INFO -     val_loss              : 0.1450
+2026-11-12 21:58:50,972 - trainer - INFO -     val_accuracy_top1     : 95.1084
+2026-11-12 21:58:50,972 - trainer - INFO -     val_macro_f1          : 93.6805
+2026-11-12 21:58:50,972 - trainer - INFO -     val_perception_acc    : 94.1307
+2026-11-12 21:58:50,972 - trainer - INFO -     val_perception_macro_f1: 93.0781
+2026-11-12 21:58:50,972 - trainer - INFO -     val_presence_acc      : 97.7064
+2026-11-12 21:58:50,972 - trainer - INFO -     val_presence_f1       : 97.5960
+2026-11-12 21:58:50,972 - trainer - INFO -     val_consistency       : 98.2962
+2026-11-12 21:58:50,972 - trainer - INFO -     epoch_time_sec        : 39.8400
+2026-11-12 21:58:50,972 - trainer - INFO -     is_best               : True
+2026-11-12 21:58:51,614 - trainer - INFO - Saved checkpoint_last.pth (epoch 15)
+2026-11-12 21:58:52,644 - trainer - INFO - Saved model_best.pth
+2026-11-12 21:58:52,651 - trainer - INFO - Training finished. Best val_macro_f1: 93.68052468326522
+2026-11-12 21:59:07,651 - test - INFO - === TEST | checkpoint: checkpoints/mnet_bert_frozen_concat_raw\seed7\model_best.pth | split: test | paraphrase: False
+2026-11-12 21:59:07,698 - test - INFO - test samples: 10935 | classes: 15
+2026-11-12 22:00:53,016 - test - INFO - Test results:
+2026-11-12 22:00:53,016 - test - INFO -     accuracy_top1           : 93.4705
+2026-11-12 22:00:53,016 - test - INFO -     macro_f1                : 92.8752
+2026-11-12 22:00:53,016 - test - INFO -     perception_acc          : 92.1459
+2026-11-12 22:00:53,016 - test - INFO -     perception_macro_f1     : 92.1907
+2026-11-12 22:00:53,016 - test - INFO -     presence_acc            : 97.4908
+2026-11-12 22:00:53,016 - test - INFO -     presence_f1             : 97.3243
+2026-11-12 22:00:53,016 - test - INFO -     consistency             : 97.6753
+2026-11-12 22:00:53,016 - test - INFO -     loss                    : 0.1844
+2026-11-12 22:00:53,016 - test - INFO -     infer_ms_per_sample     : 2.2363
+2026-11-12 22:00:53,016 - test - INFO -     infer_ms_per_sample_bs1 : 15.6348
+2026-11-12 22:00:53,016 - test - INFO -     peak_vram_mb            : 726.9000
+2026-11-12 22:00:53,016 - test - INFO -     total_params_M          : 112.7576
+2026-11-12 22:00:53,016 - test - INFO -     trainable_params_M      : 0.8940
+2026-11-12 22:00:53,016 - test - INFO -     n_unmapped              : 0
+2026-11-12 22:00:53,087 - test - INFO - Saved checkpoints/mnet_bert_frozen_concat_raw\seed7\test_metrics.json and copy in checkpoints\results_flat
+2026-11-12 22:01:04,233 - test - INFO - === TEST | checkpoint: checkpoints/mnet_bert_frozen_concat_raw\seed7\model_best.pth | split: test | paraphrase: True
+2026-11-12 22:01:04,261 - test - INFO - test samples: 10935 | classes: 15
+2026-11-12 22:02:42,733 - test - INFO - Test results:
+2026-11-12 22:02:42,733 - test - INFO -     accuracy_top1           : 86.3649
+2026-11-12 22:02:42,733 - test - INFO -     macro_f1                : 86.4233
+2026-11-12 22:02:42,733 - test - INFO -     perception_acc          : 84.7903
+2026-11-12 22:02:42,733 - test - INFO -     perception_macro_f1     : 88.0555
+2026-11-12 22:02:42,733 - test - INFO -     presence_acc            : 91.1439
+2026-11-12 22:02:42,733 - test - INFO -     presence_f1             : 94.0269
+2026-11-12 22:02:42,733 - test - INFO -     consistency             : 85.9779
+2026-11-12 22:02:42,733 - test - INFO -     loss                    : 0.3817
+2026-11-12 22:02:42,733 - test - INFO -     infer_ms_per_sample     : 2.3127
+2026-11-12 22:02:42,733 - test - INFO -     infer_ms_per_sample_bs1 : 14.9595
+2026-11-12 22:02:42,734 - test - INFO -     peak_vram_mb            : 717.7000
+2026-11-12 22:02:42,734 - test - INFO -     total_params_M          : 112.7576
+2026-11-12 22:02:42,734 - test - INFO -     trainable_params_M      : 0.8940
+2026-11-12 22:02:42,734 - test - INFO -     n_unmapped              : 0
+2026-11-12 22:02:42,809 - test - INFO - Saved checkpoints/mnet_bert_frozen_concat_raw\seed7\test_metrics_paraphrase.json and copy in checkpoints\results_flat

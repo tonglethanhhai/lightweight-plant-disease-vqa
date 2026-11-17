@@ -1,0 +1,36 @@
+2026-11-13 21:02:24,636 - test - INFO - === TEST | checkpoint: logs/encoder_finetuning/mnet_bert_finetuned_linear_concat_paraphrases\seed7\model_best.pth | split: val | paraphrase: False
+2026-11-13 21:02:24,654 - test - INFO - val samples: 5581 | classes: 15
+2026-11-13 21:04:13,276 - test - INFO - Test results:
+2026-11-13 21:04:13,276 - test - INFO -     accuracy_top1           : 96.4702
+2026-11-13 21:04:13,276 - test - INFO -     macro_f1                : 95.7221
+2026-11-13 21:04:13,276 - test - INFO -     perception_acc          : 95.7583
+2026-11-13 21:04:13,276 - test - INFO -     perception_macro_f1     : 95.3276
+2026-11-13 21:04:13,276 - test - INFO -     presence_acc            : 98.3617
+2026-11-13 21:04:13,276 - test - INFO -     presence_f1             : 98.2869
+2026-11-13 21:04:13,277 - test - INFO -     consistency             : 99.0826
+2026-11-13 21:04:13,277 - test - INFO -     loss                    : 0.1093
+2026-11-13 21:04:13,277 - test - INFO -     infer_ms_per_sample     : 6.5424
+2026-11-13 21:04:13,277 - test - INFO -     infer_ms_per_sample_bs1 : 39.1360
+2026-11-13 21:04:13,277 - test - INFO -     peak_vram_mb            : 720.6000
+2026-11-13 21:04:13,277 - test - INFO -     total_params_M          : 113.2829
+2026-11-13 21:04:13,277 - test - INFO -     trainable_params_M      : 17.7745
+2026-11-13 21:04:13,277 - test - INFO -     n_unmapped              : 0
+2026-11-13 21:04:13,335 - test - INFO - Saved logs/encoder_finetuning/mnet_bert_finetuned_linear_concat_paraphrases\seed7\test_metrics_val.json and copy in checkpoints\results_flat
+2026-11-13 21:04:27,557 - test - INFO - === TEST | checkpoint: logs/encoder_finetuning/mnet_bert_finetuned_linear_concat_paraphrases\seed7\model_best.pth | split: val | paraphrase: True
+2026-11-13 21:04:27,574 - test - INFO - val samples: 5581 | classes: 15
+2026-11-13 21:06:08,279 - test - INFO - Test results:
+2026-11-13 21:06:08,279 - test - INFO -     accuracy_top1           : 96.3985
+2026-11-13 21:06:08,279 - test - INFO -     macro_f1                : 95.5563
+2026-11-13 21:06:08,279 - test - INFO -     perception_acc          : 95.6104
+2026-11-13 21:06:08,279 - test - INFO -     perception_macro_f1     : 95.1191
+2026-11-13 21:06:08,279 - test - INFO -     presence_acc            : 98.4928
+2026-11-13 21:06:08,279 - test - INFO -     presence_f1             : 98.4248
+2026-11-13 21:06:08,279 - test - INFO -     consistency             : 98.8204
+2026-11-13 21:06:08,279 - test - INFO -     loss                    : 0.1148
+2026-11-13 21:06:08,279 - test - INFO -     infer_ms_per_sample     : 5.6877
+2026-11-13 21:06:08,279 - test - INFO -     infer_ms_per_sample_bs1 : 21.6928
+2026-11-13 21:06:08,279 - test - INFO -     peak_vram_mb            : 720.6000
+2026-11-13 21:06:08,279 - test - INFO -     total_params_M          : 113.2829
+2026-11-13 21:06:08,279 - test - INFO -     trainable_params_M      : 17.7745
+2026-11-13 21:06:08,279 - test - INFO -     n_unmapped              : 0
+2026-11-13 21:06:08,344 - test - INFO - Saved logs/encoder_finetuning/mnet_bert_finetuned_linear_concat_paraphrases\seed7\test_metrics_val_paraphrase.json and copy in checkpoints\results_flat

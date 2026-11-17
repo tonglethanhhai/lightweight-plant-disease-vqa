@@ -1,0 +1,94 @@
+Latency session 2026-11-14 15:26 on NVIDIA GeForce RTX 5070 Ti: 30 lightweight models
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 9286.84it/s]
+  mnet_bert_frozen_linear_concat                      e2e median   21.03 ms | forward   19.79 ms |    450.3 MB
+  mnet_lstm_frozen_linear_concat                      e2e median   12.10 ms | forward   10.90 ms |     80.4 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 5324.37it/s]
+  vit_bert_frozen_linear_concat                       e2e median   19.73 ms | forward   18.53 ms |    519.1 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 10372.30it/s]
+  mnet_bert_finetuned_linear_concat               e2e median   21.23 ms | forward   19.96 ms |    483.8 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 11587.13it/s]
+  mnet_bert_finetuned_linear_concat_paraphrases          e2e median   21.22 ms | forward   19.97 ms |    483.8 MB
+  mnet_lstm_finetuned_linear_concat               e2e median   12.37 ms | forward   11.13 ms |     84.6 MB
+  mnet_lstm_finetuned_linear_concat_paraphrases          e2e median   12.26 ms | forward   11.06 ms |     84.6 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 6565.99it/s]
+  vit_bert_finetuned_linear_concat                e2e median   20.10 ms | forward   18.85 ms |    558.8 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 8565.48it/s]
+  vit_bert_finetuned_linear_concat_paraphrases           e2e median   20.03 ms | forward   18.80 ms |    558.8 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 10949.01it/s]
+  mnet_bert_frozen_concat_raw           e2e median   20.63 ms | forward   19.36 ms |    446.6 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 11593.30it/s]
+  mnet_bert_frozen_linear_multiply             e2e median   21.13 ms | forward   19.91 ms |    448.3 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 9380.46it/s]
+  mnet_bert_frozen_mutan                e2e median   21.46 ms | forward   20.25 ms |    464.5 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 15159.39it/s]
+  mnet_bert_frozen_linear_plus                 e2e median   21.02 ms | forward   19.81 ms |    448.3 MB
+  mnet_lstm_frozen_concat_raw           e2e median   12.12 ms | forward   10.86 ms |     78.4 MB
+  mnet_lstm_frozen_linear_multiply             e2e median   12.29 ms | forward   11.10 ms |     79.3 MB
+  mnet_lstm_frozen_mutan                e2e median   12.68 ms | forward   11.50 ms |     92.4 MB
+  mnet_lstm_frozen_linear_plus                 e2e median   12.10 ms | forward   10.90 ms |     79.3 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 5878.35it/s]
+  vit_bert_frozen_concat_raw            e2e median   19.64 ms | forward   18.39 ms |    516.2 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 5323.72it/s]
+  vit_bert_frozen_linear_multiply              e2e median   19.58 ms | forward   18.37 ms |    517.8 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 6566.62it/s]
+  vit_bert_frozen_mutan                 e2e median   20.09 ms | forward   18.86 ms |    534.9 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 6676.13it/s]
+  vit_bert_frozen_linear_plus                  e2e median   19.88 ms | forward   18.62 ms |    517.8 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 15161.06it/s]
+  mnet_bert_frozen_self_attn                 e2e median   21.90 ms | forward   20.64 ms |    453.3 MB
+  mnet_lstm_frozen_self_attn                 e2e median   12.86 ms | forward   11.62 ms |     84.4 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 6155.69it/s]
+  vit_bert_frozen_self_attn                  e2e median   20.59 ms | forward   19.37 ms |    522.8 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 24585.02it/s]
+  mnet_bert_finetuned_mutan                      e2e median   21.79 ms | forward   20.57 ms |    501.8 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 10373.60it/s]
+  mnet_bert_finetuned_mutan_paraphrases                 e2e median   21.87 ms | forward   20.58 ms |    501.8 MB
+  mnet_lstm_finetuned_concat_raw                      e2e median   12.36 ms | forward   11.09 ms |     82.5 MB
+  mnet_lstm_finetuned_concat_raw_paraphrases                 e2e median   12.20 ms | forward   10.97 ms |     82.6 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 5628.52it/s]
+  vit_bert_finetuned_mutan                       e2e median   20.63 ms | forward   19.37 ms |    577.5 MB
+
+Loading weights:   0%|          | 0/197 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 197/197 [00:00<00:00, 5472.18it/s]
+  vit_bert_finetuned_mutan_paraphrases                  e2e median   20.67 ms | forward   19.42 ms |    577.5 MB
+  lvlm_reference/qwen3vl_4b_zeroshot e2e median  143.06 ms |   9102.5 MB
+  lvlm_reference/qwen3vl_4b_lora_3ep_paraphrases e2e median  188.77 ms |   9147.5 MB
+Wrote results\tables\latency.md
