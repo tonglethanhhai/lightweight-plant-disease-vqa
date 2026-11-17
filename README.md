@@ -15,6 +15,8 @@ This repository provides the standalone implementation and inference checkpoint 
 ```
 lightweight-plant-disease-vqa/
 ├── proposed_mnet_lstm_para.ipynb                                   # Standalone notebook (model, inference, eval, CSV summary)
+├── examples/
+│   └── sample_rice_brown_spot.jpg                                  # Sample leaf image used in notebook inference cell
 ├── checkpoints/
 │   └── mnet_lstm_finetuned_concat_raw_paraphrases/seed42/model_best.pth       # Inference weights + vocab/config (~26.1 MB)
 ├── results/
